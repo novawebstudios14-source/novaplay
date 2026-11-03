@@ -21,14 +21,14 @@ const consoleGroups={
  'PSP':['port-4','port-11','port-12','port-13','port-22','port-23'],
  'Nintendo DS':['port-4'],
  'SNES':['port-40','prince'],
- 'Mega Drive':['port-43','prince'],
+ 'Mega Drive':['curated-sonic-3-knuckles','port-43','prince'],
  'Sega CD':['port-42'],
  'NES':['port-37']
 };
 consoleGroups['Navegador']=games.filter(g=>g.id.startsWith('web-')).map(g=>g.id);
 const consoles=['Todos',...Object.keys(consoleGroups)];
 const accessLabels={browser:'Versão web',own:'Arquivos próprios',demo:'Demo / shareware',runtime:'Via runtime',fan:'Recriação / fan game',unknown:'Consultar projeto'};
-const statusLabels={page:'Página verificada',launcher:'Launcher observado',limited:'Limitado no teste'};
+const statusLabels={gameplay:'Sessão curta observada',page:'Página verificada',launcher:'Launcher observado',limited:'Limitado no teste'};
 function persist(){try{localStorage.setItem('nova-favorites',JSON.stringify(favorites));localStorage.setItem('nova-recent',JSON.stringify(recent))}catch{notify('Este navegador não permitiu salvar a biblioteca. Você pode exportá-la.')}}
 function notify(message){$('#toast').textContent=message;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),3500)}
 function art(g,large=false){const src=large?(g.screenshots?.[0]||g.art):g.art;const contain=g.artFit==='contain'&&src===g.art,retail=contain&&g.artKind==='original';return src?`${retail?`<span class="art-backdrop" aria-hidden="true" style="background-image:url('/${esc(src)}')"></span>`:''}<img class="game-art${contain?' contain-art':''}${retail?' retail-art':''}" src="/${esc(src)}" alt="${esc(g.name)} — ${g.artKind==='wordmark'?'marca de identificação do título':g.artKind==='project'?'imagem de apresentação do projeto':'imagem de identificação da edição original'}" width="${large?1440:460}" height="${large?810:215}" ${large?'fetchpriority="high"':'loading="lazy" decoding="async"'}>`:`<div class="fallback" style="--art-color:${esc(g.color)}"><span aria-hidden="true">N↗</span><strong>${esc(g.name.split(' · ')[0])}</strong></div>`}

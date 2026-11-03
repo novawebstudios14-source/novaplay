@@ -963,5 +963,33 @@
     "source": "https://www.interactive.org/awards/award_category_details.asp?idAward=1999&idGameAwardType=65",
     "imageSource": "https://www.interactive.org/images/games/1999_the_legend_of_zelda_ocarina_of_time_sm.jpg",
     "screens": []
+  },
+  "curated-sonic-3-knuckles": {
+    "name": "Sonic 3 & Knuckles · A.I.R. Web Beta",
+    "image": "assets/curated-sonic-3-knuckles.webp",
+    "source": "https://projects.sappharad.com/s3air_ios/20260328_beta/",
+    "imageSource": "https://projects.sappharad.com/s3air_ios/20260328_beta/icon.png",
+    "screens": []
+  },
+  "curated-dune-ii": {
+    "name": "Dune II · OpenDUNE Web",
+    "image": "assets/curated-dune-ii.webp",
+    "source": "https://dune2js.com/",
+    "imageSource": "https://dune2js.com/img/touch-icon-180.png",
+    "screens": []
+  },
+  "curated-pac-man": {
+    "name": "PAC-MAN · Google Doodle",
+    "image": "assets/curated-pac-man.webp",
+    "source": "https://doodles.google/doodle/30th-anniversary-of-pac-man/?hl=pt-BR",
+    "imageSource": "https://lh3.googleusercontent.com/H8hhcUas7f9Pi4aMLTQfSTVk1wwE1d_SPYYGldXn9S8GARJis2ED4EpnIfXzfBhTP8KZM64bFnmgowpU3Ct7b7OznwcRakNOM3mB2KRr=s660",
+    "screens": []
+  },
+  "curated-tetris": {
+    "name": "Tetris · Marathon oficial",
+    "image": "assets/curated-tetris.webp",
+    "source": "https://play.tetris.com/games/",
+    "imageSource": "https://play.tetris.com/games/_assets/brand/tetris-logo-main.png?v=ce88ff31",
+    "screens": []
   }
 }

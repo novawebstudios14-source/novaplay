@@ -25,3 +25,24 @@ Pesquisa de 3 de novembro de 2026. Prioridade: jogos marcantes ou premiados, dis
 6. Só atribuir um prêmio à edição que realmente o recebeu; não ao port de fãs.
 
 Os jogos já presentes — como GTA, Half-Life, Halo, DOOM, Quake e Tomb Raider — seguem disponíveis. A pesquisa não removeu jogos nem tratou títulos independentes como automaticamente inferiores.
+
+## Segunda rodada — quatro clássicos adicionados
+
+| Título e edição cadastrada | Verificação e decisão |
+|---|---|
+| [Sonic 3 & Knuckles — A.I.R. Web Beta](https://projects.sappharad.com/s3air_ios/) | Distribuição web de fãs indicada no [site de Sonic 3 A.I.R.](https://sonic3air.org/). O seletor de Sonic_Knuckles_wSonic3.bin foi observado. Adicionado como beta com arquivos próprios obrigatórios; partida não iniciada sem ROM do visitante. |
+| [Dune II — OpenDUNE Web](https://dune2js.com/) | Casa Atreides, apresentação e cenário de missão observados. A sessão exibiu conclusão rapidamente; combate, economia e campanha não validados. Adicionado com teste limitado. |
+| [PAC-MAN — Google Doodle de 2010](https://doodles.google/doodle/30th-anniversary-of-pac-man/?hl=pt-BR) | Insert Coin iniciou o labirinto; comandos nas setas, personagens e pontuação de 10 foram observados. Adicionado como edição comemorativa, sem confundir com a ROM original do arcade. Sessão curta, sem validar todas as fases. |
+| [Tetris — Marathon oficial](https://play.tetris.com/games/) | Link de jogo obtido no catálogo oficial. O player informou que WebGL não está disponível no navegador remoto. Adicionado como edição web oficial atual, com limitação explícita; não confundir com versões de NES/Game Boy. |
+
+### Candidatos que não passaram para o catálogo nesta rodada
+
+- Pokémon Emerald: o [projeto WebAssembly](https://github.com/tripplyons/pokeemerald-wasm) existe, mas a página de jogo encontrada retornou erro de conexão neste navegador. Não foi adicionada uma entrada com partida presumida.
+- Jazz Jackrabbit: a página web indicada pelo [fork OpenJazz](https://github.com/midzer/openjazz) retornou 404 na consulta.
+- Fallout: os projetos consultados descrevem uso de dados próprios e builds nativas; não foi confirmada uma distribuição web pronta nesta rodada. Permanece prioridade de pesquisa, sem trocar o original por uma recriação não identificada.
+- Heroes of Might and Magic III: o [fork WebAssembly do VCMI](https://github.com/realkompot/vcmi_wasm_demo/tree/wasm-demo) se descreve como demonstração técnica, com conexão cliente/servidor problemática e build não totalmente automatizada. A página hospedada encontrada na DOS Zone não pôde ser validada na conexão atual.
+- Warcraft II, Age of Empires e Aladdin: há páginas no catálogo da DOS Zone, mas os acessos diretos retornaram timeout/erro de conexão nesta rodada. Não foram cadastrados como jogos verificados.
+- [Command & Conquer HTML5](https://adityaravishankar.github.io/command-and-conquer/): a página do autor descreve uma prova de conceito, distinta do jogo completo, e aponta URLs legadas. Não entrou como edição original completa.
+- Sonic Mania: o repositório encontrado não bastou para confirmar uma distribuição web atual e estável. Não foi promovido ao catálogo só por estar em um índice.
+
+A seleção desta rodada se baseia em relevância histórica e identificação das edições. Não se atribuiu prêmio específico a esses quatro jogos sem confirmação na fonte da premiação.
