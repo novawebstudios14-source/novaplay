@@ -1,0 +1,81 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 6765f07..081dc57 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -89,6 +89,10 @@ if(PS2_GENERATED)
+     target_include_directories(ps2game PRIVATE "${PS2_GENERATED}")
+     target_link_libraries(ps2game PUBLIC ps2runtime)
+     target_compile_options(ps2game PRIVATE -Wno-unused-label -Wno-unused-variable)
++    if(NOT EMSCRIPTEN)
++        # Faster exploration builds; retain Release optimization for runtime and web.
++        target_compile_options(ps2game PRIVATE -O1)
++    endif()
+ 
+     if(EMSCRIPTEN)
+         set(PS2_WEB_ELF "" CACHE FILEPATH "Game executable preloaded as /game/core.elf")
+diff --git a/runtime/include/ps2/vu_ops.hpp b/runtime/include/ps2/vu_ops.hpp
+index d98afb7..7295735 100644
+--- a/runtime/include/ps2/vu_ops.hpp
++++ b/runtime/include/ps2/vu_ops.hpp
+@@ -396,7 +396,14 @@ PS2_VU_INLINE void vstore(Reg128 &r, v4u v) { std::memcpy(&r, &v, 16); }
+ PS2_VU_INLINE v4u vsplat(std::uint32_t x) { return v4u{x, x, x, x}; }
+ PS2_VU_INLINE v4u vsel(v4u old, v4u now, v4u mask) { return (now & mask) | (old & ~mask); }
+ PS2_VU_INLINE v4u vfix(v4u x) {
++#if defined(__clang__)
+     const v4i clamped = __builtin_elementwise_min((v4i)(x & 0x7FFFFFFFu), (v4i){0x7F7FFFFF, 0x7F7FFFFF, 0x7F7FFFFF, 0x7F7FFFFF});
++#else
++    const v4i magnitude = (v4i)(x & 0x7FFFFFFFu);
++    const v4i limit = {0x7F7FFFFF, 0x7F7FFFFF, 0x7F7FFFFF, 0x7F7FFFFF};
++    const v4i below = magnitude < limit;
++    const v4i clamped = (magnitude & below) | (limit & ~below);
++#endif
+     const v4i normal = (v4f)clamped >= (v4f)(v4i){0x00800000, 0x00800000, 0x00800000, 0x00800000};
+     return (x & 0x80000000u) | (v4u)(clamped & normal);
+ }
+@@ -441,7 +448,8 @@ PS2_VU_INLINE v4u vftoi(v4u x, int fraction) {
+ PS2_VU_INLINE v4u vitof(v4u x, int fraction) {
+     const v4i v = (v4i)x;
+     v4f f = __builtin_convertvector(v, v4f);
+-    if (__builtin_reduce_or((v4i)(x + 0x01000000u > 0x02000000u))) {
++    const v4i needs_fix = (v4i)(x + 0x01000000u > 0x02000000u);
++    if (needs_fix[0] | needs_fix[1] | needs_fix[2] | needs_fix[3]) {
+         const v4i big = f >= 2147483648.0f;
+         const v4i back = __builtin_convertvector((v4f)((v4i)f & ~big), v4i);
+         const v4i over = big | ((v >= 0) & (back > v)) | ((v < 0) & (back < v));
+diff --git a/runtime/src/system.cpp b/runtime/src/system.cpp
+index 86f8ca9..905cd05 100644
+--- a/runtime/src/system.cpp
++++ b/runtime/src/system.cpp
+@@ -378,7 +378,7 @@ bool load_elf(const std::string &path, std::uint32_t &entry) {
+         const std::size_t ph = phoff + i * u16(42);
+         if (u32(ph) != 1) continue;
+         const std::uint32_t offset = u32(ph + 4), filesz = u32(ph + 16), memsz = u32(ph + 20);
+-        if (offset + filesz > data.size() || filesz > memsz) return false;
++        if (filesz > memsz || (filesz && (offset > data.size() || filesz > data.size() - offset))) return false;
+         if (const std::uint32_t at = u32(ph + 8); (at >> 14) == (kScratchpadBase >> 14)) {
+             const std::uint32_t start = at & (kScratchpadSize - 1);
+             if (start + memsz > kScratchpadSize) return false;
+@@ -387,7 +387,9 @@ bool load_elf(const std::string &path, std::uint32_t &entry) {
+             continue;
+         }
+         const std::uint32_t vaddr = physical(u32(ph + 8));
+-        if (vaddr + memsz > kRamSize) return false;
++        // Empty SCE reservation PHDRs can lie beyond physical EE RAM.
++        if (vaddr >= kRamSize && !filesz) continue;
++        if (vaddr > kRamSize || memsz > kRamSize - vaddr) return false;
+         std::memcpy(g_ram + vaddr, data.data() + offset, filesz);
+         watch_span(vaddr, filesz, "boot:load_exec");
+         std::memset(g_ram + vaddr + filesz, 0, memsz - filesz);
+diff --git a/scripts/port.sh b/scripts/port.sh
+index 6370a3a..9dc8dfc 100755
+--- a/scripts/port.sh
++++ b/scripts/port.sh
+@@ -109,7 +109,7 @@ if windows=$(python3 -I "$here/windows.py" list "$elf") && [ -n "$windows" ]; th
+   echo "code windows the game rewrites: $(echo "$windows" | tr '\n' ' ')"
+ fi
+ 
+-translate() { "$tools/eerecomp" "$elf" --entries "$game/entries.txt" "${modules[@]}" "${overlays[@]}" --out "$generated" | tail -1; }
++translate() { python3 "$here/novaplay_hints.py" "$game"; "$tools/eerecomp" "$elf" --entries "$game/entries.txt" "${modules[@]}" "${overlays[@]}" --out "$generated" | tail -1; }
+ 
+ echo "== [3/6] machine code to C++"
+ touch "$game/entries.txt"
