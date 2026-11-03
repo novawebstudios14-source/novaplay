@@ -1,5 +1,93 @@
 const games = [
   {
+    "status": "Limitado no teste",
+    "color": "#6444bf",
+    "symbol": "✦",
+    "device": "Computador · controles informados pelo projeto",
+    "checked": "2026-11-03",
+    "http": 200,
+    "inputs": [
+      "Teclado",
+      "Controle"
+    ],
+    "devices": [
+      "PC"
+    ],
+    "graphics": "WebGL 2",
+    "testLevel": "limited",
+    "access": "fan",
+    "artFit": "contain",
+    "screenshots": [],
+    "id": "classic-mario-kart-64",
+    "name": "Mario Kart 64 · MarioKart64JS",
+    "title": "Mario Kart 64",
+    "sub": "CORRIDA",
+    "cat": "Corrida",
+    "slug": "mario-kart-64",
+    "url": "https://mk64js.gokart.games/play",
+    "source": "https://github.com/AgentiLoop/MarioKart64JS",
+    "discoverySource": "https://github.com/AgentiLoop/MarioKart64JS",
+    "kind": "Recriação experimental",
+    "summary": "As pistas e batalhas do clássico de Nintendo 64 em uma recriação para navegador.",
+    "notes": "Projeto não oficial e em desenvolvimento. O autor informa 16 pistas, modos Grand Prix, VS, Time Trials, Battle e multiplayer online. Nesta sessão, a página abriu, mas o canvas permaneceu preto, inclusive após Enter. Corrida e multiplayer não foram validados. Não é uma versão oficial da Nintendo.",
+    "verification": "Página HTTP 200 e canvas observados em 03/11/2026. Tela preta neste navegador remoto; corrida não validada.",
+    "requirements": "Consulte os requisitos e instruções do projeto; não houve solicitação de arquivos próprios na página observada.",
+    "multiplayer": true,
+    "art": "assets/classic-mario-kart-64.webp",
+    "artSource": "https://mk64js.gokart.games/play",
+    "artImageSource": "https://mk64js.gokart.games/img/title.jpg",
+    "artKind": "project",
+    "artDescription": "Imagem de apresentação publicada por MarioKart64JS. Não comprova a execução do projeto.",
+    "desc": "Projeto não oficial e em desenvolvimento. O autor informa 16 pistas, modos Grand Prix, VS, Time Trials, Battle e multiplayer online. Nesta sessão, a página abriu, mas o canvas permaneceu preto, inclusive após Enter. Corrida e multiplayer não foram validados. Não é uma versão oficial da Nintendo.",
+    "searchText": "Mario Kart 64 Mario Kart 64 · MarioKart64JS Nintendo 64 N64 As pistas e batalhas do clássico de Nintendo 64 em uma recriação para navegador."
+  },
+  {
+    "status": "Limitado no teste",
+    "color": "#6444bf",
+    "symbol": "✦",
+    "device": "Computador · controles informados pelo projeto",
+    "checked": "2026-11-03",
+    "http": 200,
+    "inputs": [
+      "Teclado",
+      "Controle"
+    ],
+    "devices": [
+      "PC"
+    ],
+    "graphics": "WebGL 2",
+    "testLevel": "limited",
+    "access": "fan",
+    "artFit": "contain",
+    "screenshots": [],
+    "id": "classic-ocarina-of-time",
+    "name": "Zelda: Ocarina of Time · Clean Room",
+    "title": "The Legend of Zelda: Ocarina of Time",
+    "sub": "AVENTURA",
+    "cat": "Aventura",
+    "slug": "zelda-ocarina-of-time",
+    "url": "https://andrewnakas.github.io/oot-cleanroom/",
+    "source": "https://github.com/andrewnakas/oot-cleanroom",
+    "discoverySource": "https://github.com/andrewnakas/oot-cleanroom",
+    "kind": "Build experimental com assets recriados",
+    "summary": "Explore o projeto web de um clássico premiado de Hyrule, com texturas e sons recriados.",
+    "notes": "Build não oficial baseado em Ship of Harkinian. Segundo o autor, dispensa ROM do visitante e recria texturas, fontes, sons e fundos; a apresentação difere do Nintendo 64 original. Na sessão remota, o carregador abriu e o título mudou para Ship of Harkinian, mas a tela de jogo permaneceu escura. Partida não validada. Não apresentar como edição original fiel ou versão oficial da Nintendo.",
+    "verification": "HTTP 200 e carregador observados em 03/11/2026. Após carregar, canvas escuro; partida não validada.",
+    "requirements": "O autor informa que esta build não pede ROM. Conexão para baixar arquivos do projeto; compatibilidade e desempenho variam.",
+    "multiplayer": false,
+    "art": "assets/classic-ocarina-of-time.webp",
+    "artSource": "https://www.interactive.org/awards/award_category_details.asp?idAward=1999&idGameAwardType=65",
+    "artImageSource": "https://www.interactive.org/images/games/1999_the_legend_of_zelda_ocarina_of_time_sm.jpg",
+    "artKind": "original",
+    "artDescription": "Capa do título original na página da AIAS, apenas para identificação. Esta build web usa assets recriados.",
+    "award": {
+      "name": "Game of the Year — Interactive Achievement Awards 1999",
+      "source": "https://www.interactive.org/awards/award_category_details.asp?idAward=1999&idGameAwardType=65"
+    },
+    "desc": "Build não oficial baseado em Ship of Harkinian. Segundo o autor, dispensa ROM do visitante e recria texturas, fontes, sons e fundos; a apresentação difere do Nintendo 64 original. Na sessão remota, o carregador abriu e o título mudou para Ship of Harkinian, mas a tela de jogo permaneceu escura. Partida não validada. Não apresentar como edição original fiel ou versão oficial da Nintendo.",
+    "searchText": "The Legend of Zelda: Ocarina of Time Zelda: Ocarina of Time · Clean Room Nintendo 64 N64 Explore o projeto web de um clássico premiado de Hyrule, com texturas e sons recriados."
+  },
+  {
     "id": "port-0",
     "name": "GTA V",
     "title": "GTA V",
@@ -4128,4 +4216,4 @@ const games = [
     "artDescription": "Imagem ou ícone publicado pelo criador, usado para identificação do jogo."
   }
 ];
-const audit = {"date":"2026-11-03","indexEntries":978,"indexLaunchLinks":551,"checkedDestinations":158,"httpSuccess":149,"catalogEntries":100,"method":"Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo. Ampliação: 24 páginas de jogos e criadores responderam HTTP 200 em 03/11/2026; as partidas dessas novas entradas não foram testadas.","sources":["https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports","https://github.com/HarshitWaldia/Browser-Games-Directory","https://portedgames.com/browser/","https://playgta5.pro/games","https://github.com/jenissimo/bottleship","https://play2048.co/","https://hexgl.bkcore.com/play/","https://adarkroom.doublespeakgames.com/","https://orteil.dashnet.org/cookieclicker/","https://www.decisionproblem.com/paperclips/","https://ivark.github.io/AntimatterDimensions/","https://sandspiel.club/","https://sandboxels.r74n.com/","https://shapez.io/","https://kodub.itch.io/polytrack","https://ninja-muffin24.itch.io/funkin","https://maddymakesgamesinc.itch.io/celesteclassic","https://littlealchemy2.com/","https://neal.fun/infinite-craft/","https://slowroads.io/","https://skribbl.io/","https://garticphone.com/","https://smashkarts.io/","https://shellshock.io/","http://slither.io/?a","https://0hh1.com/","https://0hn0.com/","https://ducklings.io/","https://teamwood.itch.io/super-auto-pets"],"browserTests":[{"game":"GTA V","url":"https://playgta5.pro/","result":"Launcher aberto; cliques em Play não chegaram à partida nesta sessão. Anúncios observados. Nenhum certificado ou programa instalado."},{"game":"NFS Most Wanted","url":"https://web.nfsmwo.com/","result":"Tela inicial carregada; início solo acionado; runtime encerrou com código 0x1. Corrida não validada."},{"game":"PES 6","url":"https://pes6.optijuegos.net/","result":"Seletor de início carregado; início sem narração falhou por adaptador WebGPU indisponível no navegador remoto."}]};
+const audit = {"date":"2026-11-03","indexEntries":980,"indexLaunchLinks":553,"checkedDestinations":160,"httpSuccess":151,"catalogEntries":102,"method":"Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo. Ampliação: 24 páginas de jogos e criadores responderam HTTP 200 em 03/11/2026; as partidas dessas novas entradas não foram testadas.","sources":["https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports","https://github.com/HarshitWaldia/Browser-Games-Directory","https://portedgames.com/browser/","https://playgta5.pro/games","https://github.com/jenissimo/bottleship","https://play2048.co/","https://hexgl.bkcore.com/play/","https://adarkroom.doublespeakgames.com/","https://orteil.dashnet.org/cookieclicker/","https://www.decisionproblem.com/paperclips/","https://ivark.github.io/AntimatterDimensions/","https://sandspiel.club/","https://sandboxels.r74n.com/","https://shapez.io/","https://kodub.itch.io/polytrack","https://ninja-muffin24.itch.io/funkin","https://maddymakesgamesinc.itch.io/celesteclassic","https://littlealchemy2.com/","https://neal.fun/infinite-craft/","https://slowroads.io/","https://skribbl.io/","https://garticphone.com/","https://smashkarts.io/","https://shellshock.io/","http://slither.io/?a","https://0hh1.com/","https://0hn0.com/","https://ducklings.io/","https://teamwood.itch.io/super-auto-pets","https://github.com/AgentiLoop/MarioKart64JS","https://github.com/andrewnakas/oot-cleanroom"],"browserTests":[{"game":"GTA V","url":"https://playgta5.pro/","result":"Launcher aberto; cliques em Play não chegaram à partida nesta sessão. Anúncios observados. Nenhum certificado ou programa instalado."},{"game":"NFS Most Wanted","url":"https://web.nfsmwo.com/","result":"Tela inicial carregada; início solo acionado; runtime encerrou com código 0x1. Corrida não validada."},{"game":"PES 6","url":"https://pes6.optijuegos.net/","result":"Seletor de início carregado; início sem narração falhou por adaptador WebGPU indisponível no navegador remoto."}]};

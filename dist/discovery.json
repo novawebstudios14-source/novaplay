@@ -4888,5 +4888,15 @@
     "name": "Super Auto Pets",
     "url": "https://teamwood.itch.io/super-auto-pets",
     "source": "https://teamwood.itch.io/super-auto-pets"
+  },
+  {
+    "name": "Mario Kart 64 · MarioKart64JS",
+    "url": "https://mk64js.gokart.games/play",
+    "source": "https://github.com/AgentiLoop/MarioKart64JS"
+  },
+  {
+    "name": "Zelda: Ocarina of Time · Clean Room",
+    "url": "https://andrewnakas.github.io/oot-cleanroom/",
+    "source": "https://github.com/andrewnakas/oot-cleanroom"
   }
 ]
