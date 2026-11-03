@@ -1,0 +1,2098 @@
+{
+  "date": "2026-11-03",
+  "indexEntries": 954,
+  "indexLaunchLinks": 527,
+  "checkedDestinations": 134,
+  "httpSuccess": 125,
+  "catalogEntries": 76,
+  "method": "Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo.",
+  "sources": [
+    "https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports",
+    "https://github.com/HarshitWaldia/Browser-Games-Directory",
+    "https://portedgames.com/browser/",
+    "https://playgta5.pro/games",
+    "https://github.com/jenissimo/bottleship"
+  ],
+  "destinations": [
+    {
+      "name": "3D Pinball for Windows - Space Cadet",
+      "url": "https://ksylvestre.itch.io/space-cadet-pinball",
+      "source": "https://github.com/k4zmu2a/SpaceCadetPinball",
+      "http": 200,
+      "final_url": "https://ksylvestre.itch.io/space-cadet-pinball",
+      "title": "Space Cadet Pinball by ksylvestre",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Burnout 3: Takedown",
+      "url": "https://burnout3.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://burnout3.online/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Call of Duty Web Collection",
+      "url": "https://cod-webports.pages.dev/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://cod-webports.pages.dev/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Call of Duty: Black Ops Zombies",
+      "url": "http://vel.gg/bo1z",
+      "source": null,
+      "http": null,
+      "error": "HTTP Error 451: Unknown"
+    },
+    {
+      "name": "Call of Duty: Black Ops Zombies (2)",
+      "url": "https://vel.gg/bsz",
+      "source": null,
+      "http": 200,
+      "final_url": "https://vel.gg/bsz",
+      "title": "Zombies",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Call of Duty: Modern Warfare 2",
+      "url": "https://ovz-game-production.up.railway.app",
+      "source": null,
+      "http": 200,
+      "final_url": "https://ovz-game-production.up.railway.app",
+      "title": "Open Victor Zulu",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Castle Crashers",
+      "url": "https://truffled.lol/games/castle/index.html",
+      "source": null,
+      "http": 200,
+      "final_url": "https://truffled.lol/games/castle/index.html",
+      "title": "Castle Crashers",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Cave Story",
+      "url": "https://midzer.de/wasm/cavestory/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://midzer.de/wasm/cavestory/",
+      "title": "Cave Story",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Celeste (2)",
+      "url": "https://celeste.r58playz.dev/",
+      "source": "https://github.com/web-ports/celeste",
+      "http": 200,
+      "final_url": "https://celeste.r58playz.dev/",
+      "title": "Webleste",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Command & Conquer: Generals (wasm.com.br)",
+      "url": "https://generals.wasm.com.br/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://generals.wasm.ltd/",
+      "title": "GeneralsX — a decompilation running in your browser — wasm.ltd",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": true
+      }
+    },
+    {
+      "name": "Command & Conquer: Generals Zero Hour",
+      "url": "https://generals.wasm.ltd",
+      "source": "https://github.com/origami-ltd/wasm-generals",
+      "http": 200,
+      "final_url": "https://generals.wasm.ltd",
+      "title": "GeneralsX — a decompilation running in your browser — wasm.ltd",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": true
+      }
+    },
+    {
+      "name": "Command & Conquer: Red Alert 2",
+      "url": "https://chronodivide.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://chronodivide.com/",
+      "title": "Red Alert 2: Chrono Divide",
+      "signals": {
+        "canvas": false,
+        "iframe": true,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Command & Conquer: Renegade (Open Commando)",
+      "url": "https://open-commando.netanelgilad.workers.dev",
+      "source": "https://github.com/netanelgilad/open-commando",
+      "http": 200,
+      "final_url": "https://open-commando.netanelgilad.workers.dev",
+      "title": "Open Commando",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Commander Keen",
+      "url": "https://www.jamesfmackenzie.com/chocolatekeen/",
+      "source": "https://github.com/jamesfmackenzie/chocolatekeen",
+      "http": 200,
+      "final_url": "https://www.jamesfmackenzie.com/chocolatekeen/",
+      "title": "Commander Keen in WebAssembly",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Counter Strike & Half Life (2)",
+      "url": "https://pixelsuft.github.io/hl/",
+      "source": "https://github.com/Pixelsuft/hl",
+      "http": 200,
+      "final_url": "https://pixelsuft.github.io/hl/",
+      "title": "Pixelsuft hl",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Crash Bash Online",
+      "url": "https://crashbash.app/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://crashbash.app/",
+      "title": "Crash Bash Online Multiplayer With Friends | PS1 Game",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Crash Nitro Kart",
+      "url": "https://crashnitrokart.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://crashnitrokart.online/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Crash Team Racing (High Octane)",
+      "url": "https://rinnegatamante.github.io/Crash-Team-Racing-High-Octane/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://rinnegatamante.github.io/Crash-Team-Racing-High-Octane/",
+      "title": "Crash Team Racing: High Octane",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Crash Team Racing Turbocharged",
+      "url": "https://ctr.cmzi.uk/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://ctr.cmzi.uk/",
+      "title": "Crash Team Racing: Turbocharged – PC port for Windows and Linux",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Crashout Crew",
+      "url": "https://wasm.rip/files/cc/index.html",
+      "source": null,
+      "http": 200,
+      "final_url": "https://wasm.rip/files/cc/index.html",
+      "title": "yes",
+      "signals": {
+        "canvas": false,
+        "iframe": true,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Crisis Core: Final Fantasy VII",
+      "url": "https://crisiscorefinalfantasy7.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://crisiscorefinalfantasy7.online/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Cuphead (4)",
+      "url": "https://wasm.rip/files/cuphead/index.html",
+      "source": null,
+      "http": 200,
+      "final_url": "https://wasm.rip/files/cuphead/index.html",
+      "title": "Unity WebGL Player | Cuphead",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Diablo",
+      "url": "https://d07riv.github.io/diabloweb/",
+      "source": "https://github.com/d07RiV/diabloweb",
+      "http": 200,
+      "final_url": "https://d07riv.github.io/diabloweb/",
+      "title": "DIABLO",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Diablo (diablo_web)",
+      "url": "https://johnimril.github.io/diablo_web/",
+      "source": "https://github.com/johnimril/diablo_web",
+      "http": 200,
+      "final_url": "https://johnimril.github.io/diablo_web/",
+      "title": "Diablo Web - Original Diablo in Your Browser",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Doom",
+      "url": "https://raz0red.github.io/webprboom/",
+      "source": "https://github.com/midzer/chocolate-doom",
+      "http": 200,
+      "final_url": "https://raz0red.github.io/webprboom/",
+      "title": "WebPrBoom",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Doom (joeheyming, classic and mods)",
+      "url": "https://joeheyming.github.io/doom/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://joeheyming.github.io/doom/",
+      "title": "Play DOOM in Browser — Classic &amp; Fan Mods Online",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Doom (WebDOOM)",
+      "url": "https://ustymukhman.github.io/WebDOOM/public/",
+      "source": "https://github.com/UstymUkhman/WebDOOM",
+      "http": 200,
+      "final_url": "https://ustymukhman.github.io/WebDOOM/public/",
+      "title": "WebDOOM",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Doom 3 Demo",
+      "url": "https://wasm.continuation-labs.com/d3demo/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://wasm.continuation-labs.com/d3demo/",
+      "title": "idTech 4 WebAssembly port - Doom 3 Demo",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Doom Multiplayer",
+      "url": "https://silentspacemarine.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://silentspacemarine.com/",
+      "title": "WebSockets Wasm Doom",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Duke Nukem 3D",
+      "url": "https://midzer.de/wasm/duke3d/",
+      "source": "https://github.com/midzer/BelgianChocolateDuke3D",
+      "http": 200,
+      "final_url": "https://midzer.de/wasm/duke3d/",
+      "title": "Duke Nukem 3D",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Duke Nukem 3D (eduke32-wasm)",
+      "url": "https://digitalcybersoft.github.io/eduke32-wasm/",
+      "source": "https://github.com/digitalcybersoft/eduke32-wasm",
+      "http": 200,
+      "final_url": "https://digitalcybersoft.github.io/eduke32-wasm/",
+      "title": "Duke Nukem 3D (WebAssembly)",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "EA Sports Cricket 07",
+      "url": "https://cricket07.dhaiwat.com/",
+      "source": "https://github.com/Dhaiwat10/cricket07-browser",
+      "http": 200,
+      "final_url": "https://cricket07.dhaiwat.com/",
+      "title": "Site Unavailable",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Fallout: Nevada / Sonora",
+      "url": "https://fallout-nevada.ru/#/en",
+      "source": null,
+      "http": 200,
+      "final_url": "https://fallout-nevada.ru/#/en",
+      "title": "Fallout Nevada & Sonora",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Gran Turismo 2",
+      "url": "https://ydubr-gt2.surge.sh/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://ydubr-gt2.surge.sh/",
+      "title": "GT2 · 0.8.0 · Browser",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Gran Turismo 4",
+      "url": "https://granturismo4.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://granturismo4.online/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Grand Theft Auto 2",
+      "url": "https://m1stermo.github.io/gta2/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://m1stermo.github.io/gta2/",
+      "title": "GTA2 in your browser",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Grand Theft Auto III (wasm.rip)",
+      "url": "https://wasm.rip/files/gta3/index.html",
+      "source": null,
+      "http": 200,
+      "final_url": "https://wasm.rip/files/gta3/index.html",
+      "title": "GTA 3",
+      "signals": {
+        "canvas": false,
+        "iframe": true,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Grand Theft Auto III Online (quenq)",
+      "url": "https://iii.quenq.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://iii.quenq.com/",
+      "title": "III Web",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Grand Theft Auto: Chinatown Wars (PPSSPP Web)",
+      "url": "https://gta-chinatown-wars.pages.dev/",
+      "source": "https://github.com/root-hunter/ppsspp-web",
+      "http": 200,
+      "final_url": "https://gta-chinatown-wars.pages.dev/",
+      "title": "Grand Theft Auto: Chinatown Wars",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Grand Theft Auto: Vice City (quenq)",
+      "url": "https://vc.quenq.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://vc.quenq.com/",
+      "title": "VC Web",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Grand Theft Auto: Vice City (revc.wasm.ltd)",
+      "url": "https://revc.wasm.ltd/",
+      "source": "https://github.com/origami-ltd/wasm-revc",
+      "http": 200,
+      "final_url": "https://revc.wasm.ltd/",
+      "title": "reVC — a decompilation running in your browser — wasm.ltd",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "GTA 3 (3)",
+      "url": "https://wasmarcade.com/gta3",
+      "source": null,
+      "http": 200,
+      "final_url": "https://wasmarcade.com/gta3",
+      "title": "Play GTA III in Your Browser | WASM Arcade",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "GTA V (GrandV V2)",
+      "url": "https://v2.fiveplay.lol/launcher.html",
+      "source": null,
+      "http": 200,
+      "final_url": "https://v2.fiveplay.lol/launcher.html",
+      "title": "$GrandV — Local Launcher",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": true,
+        "webgpu": true
+      }
+    },
+    {
+      "name": "GTA Vice City (2)",
+      "url": "https://joncodeofficial.github.io/gta-vice-city-wasm/",
+      "source": "https://github.com/joncodeofficial/gta-vice-city-wasm",
+      "http": 200,
+      "final_url": "https://joncodeofficial.github.io/gta-vice-city-wasm/",
+      "title": "GTA: Vice City — WASM Port",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Half Life 2",
+      "url": "https://hl2.slqnt.dev/",
+      "source": "https://github.com/AlexBoops/half-life-2-port",
+      "http": null,
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "name": "Half-Life and Counter-Strike 1.6 (WebXash)",
+      "url": "https://x8bitrain.github.io/webXash/",
+      "source": "https://github.com/x8bitrain/webXash",
+      "http": 200,
+      "final_url": "https://x8bitrain.github.io/webXash/",
+      "title": "WebXash",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Halo: Combat Evolved",
+      "url": "https://mitchellhynes.com/halo/halo.html",
+      "source": "https://github.com/ecumene/web-halo",
+      "http": 200,
+      "final_url": "https://mitchellhynes.com/combat-lab/",
+      "title": "Combat Lab",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Halo: Combat Evolved (Combat Lab)",
+      "url": "https://mitchellhynes.com/combat-lab/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://mitchellhynes.com/combat-lab/",
+      "title": "Combat Lab",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Halo: Combat Evolved (OpenCE)",
+      "url": "https://opencommunityedition.com/",
+      "source": "https://github.com/OpenCommunityEdition/OpenCE",
+      "http": 200,
+      "final_url": "https://opencommunityedition.com/",
+      "title": "OpenCE",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Halo: Combat Evolved Mobile",
+      "url": "https://hcemobile.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://hcemobile.com/",
+      "title": "HCEMobile - Halo: Combat Evolved Mobile",
+      "signals": {
+        "canvas": true,
+        "iframe": true,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Harry Potter and the Chamber of Secrets",
+      "url": "https://hp2.mihaimateias.com/",
+      "source": "https://github.com/cefege/harry-potter-2-chamber-of-secrets-pc",
+      "http": null,
+      "error": "HTTP Error 530: Unknown"
+    },
+    {
+      "name": "Hexen II",
+      "url": "https://dos.zone/hexen-2-fteqw/",
+      "source": null,
+      "http": null,
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "name": "Hexen II (Hexenwail)",
+      "url": "https://hexenwail.github.io/hexenwail/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://hexenwail.github.io/hexenwail/",
+      "title": "Hexenwail",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Hollow Knight (dezm0n web port)",
+      "url": "https://dezm0n.itch.io/hollow-knight-web-port",
+      "source": null,
+      "http": 200,
+      "final_url": "https://dezm0n.itch.io/hollow-knight-web-port",
+      "title": "Hollow Knight — Web Port by dezm0n",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "I Can't Believe It's Not Sonic 1",
+      "url": "https://jojudge.com/ICBINS1/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://jojudge.com/ICBINS1/",
+      "title": "Unity WebGL Player | I Can't Believe it's Not Sonic 1",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "The Legend of Zelda: Twilight Princess (Dusklight)",
+      "url": "https://dusklight.pages.dev/",
+      "source": "https://github.com/caribbeansc/dusklight",
+      "http": 200,
+      "final_url": "https://dusklight.pages.dev/",
+      "title": "Dusklight",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": true
+      }
+    },
+    {
+      "name": "LEGO Island",
+      "url": "https://isle.pizza/",
+      "source": "https://github.com/isledecomp/isle.pizza",
+      "http": 200,
+      "final_url": "https://isle.pizza/",
+      "title": "LEGO® Island",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "LEGO Racers",
+      "url": "https://steponit.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://steponit.online/",
+      "title": "Step On It",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Mortal Kombat: Armageddon",
+      "url": "https://mka.lauta.site/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://mka.lauta.site/",
+      "title": "Mortal Kombardo: Cagarmageddon",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Mortal Kombat: Shaolin Monks",
+      "url": "https://mortalkombatsm.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://mortalkombatsm.online/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Need for Speed: Most Wanted (2005) (dezm0n web port)",
+      "url": "https://dezm0n.itch.io/nfs-most-wanted-web-port",
+      "source": null,
+      "http": 200,
+      "final_url": "https://dezm0n.itch.io/nfs-most-wanted-web-port",
+      "title": "Need for Speed: Most Wanted — Web Port by dezm0n",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": true
+      }
+    },
+    {
+      "name": "Need for Speed: Most Wanted (2005) (NFSMW Online web)",
+      "url": "https://web.nfsmwo.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://web.nfsmwo.com/",
+      "title": "Play Need for Speed: Most Wanted (2005) Online in Your Browser",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Need for Speed: Most Wanted (2005) (NFSMW Online)",
+      "url": "https://nfsmwonline.com",
+      "source": null,
+      "http": 200,
+      "final_url": "https://nfsmwonline.com/login",
+      "title": "NFSMW Online",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": true
+      }
+    },
+    {
+      "name": "Need for Speed: Underground 2",
+      "url": "https://nfsu2.xyz/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://nfsu2.xyz/",
+      "title": "Underground 2 Revived",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": true
+      }
+    },
+    {
+      "name": "Need for Speed: Underground 2 (nfsunderground2.site)",
+      "url": "https://nfsunderground2.site/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://nfsunderground2.site/",
+      "title": "NFS Underground 2 Online | Juega en el navegador",
+      "signals": {
+        "canvas": false,
+        "iframe": true,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": true
+      }
+    },
+    {
+      "name": "NetQuake.io",
+      "url": "https://www.netquake.io/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://www.netquake.io/",
+      "title": "NetQuake.io — Quake in Your Browser",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Open Sonic",
+      "url": "https://clarkeadg.github.io/opensonic-js/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://clarkeadg.github.io/opensonic-js/",
+      "title": "Open Sonic JS",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "OpenTTD",
+      "url": "https://openttdonline.com/play/",
+      "source": "https://github.com/OpenTTD/OpenTTD",
+      "http": 200,
+      "final_url": "https://openttdonline.com/play/",
+      "title": "OpenTTD Online",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Pokémon Mystery Dungeon (Web Mystery Dungeon)",
+      "url": "https://frequentgamer.itch.io/pmdweb",
+      "source": null,
+      "http": 200,
+      "final_url": "https://frequentgamer.itch.io/pmdweb",
+      "title": "Web Mystery Dungeon by FrequentGamer",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Portal",
+      "url": "https://yikes.pw/portal/",
+      "source": "https://github.com/weliveinhell/source-engine",
+      "http": 200,
+      "final_url": "https://yikes.pw/portal/",
+      "title": "yikes!",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Prince of Persia",
+      "url": "https://princejs.com/",
+      "source": "https://github.com/midzer/SDLPoP",
+      "http": 200,
+      "final_url": "https://princejs.com/",
+      "title": "PrinceJS",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Pro Evolution Soccer 2011",
+      "url": "https://pes11.optijuegos.net/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://pes11.optijuegos.net/",
+      "title": "PES 2011 Web Port",
+      "signals": {
+        "canvas": true,
+        "iframe": true,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": true
+      }
+    },
+    {
+      "name": "Pro Evolution Soccer 2012",
+      "url": "https://pes12.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://pes12.online/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Pro Evolution Soccer 2014 (PSP)",
+      "url": "https://pes14.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://pes14.online/",
+      "title": "PES 2014 Web Online | Juega gratis en el navegador",
+      "signals": {
+        "canvas": false,
+        "iframe": true,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Pro Evolution Soccer 6",
+      "url": "http://pes6.optijuegos.net",
+      "source": null,
+      "http": 200,
+      "final_url": "https://pes6.optijuegos.net/",
+      "title": "PES 6 Web Online Port",
+      "signals": {
+        "canvas": true,
+        "iframe": true,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": true
+      }
+    },
+    {
+      "name": "Quake",
+      "url": "https://qwasm.m-h.org.uk/",
+      "source": "https://github.com/GMH-Code/Qwasm",
+      "http": 200,
+      "final_url": "https://qwasm.m-h.org.uk/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Quake II (q2.pieter.com)",
+      "url": "http://q2.pieter.com",
+      "source": null,
+      "http": 200,
+      "final_url": "https://q2.pieter.com/",
+      "title": "Quake II Multiplayer Online - q2.pieter.com (Non-commercial and unofficial)",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Quake II (Quake WASM2)",
+      "url": "https://qwasm2.m-h.org.uk/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://qwasm2.m-h.org.uk/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Quake III Arena (q3.pieter.com)",
+      "url": "https://q3.pieter.com",
+      "source": null,
+      "http": 200,
+      "final_url": "https://q3.pieter.com",
+      "title": "Quake III Online - q3.pieter.com (Non-commercial and unofficial)",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Quake III Arena (q3js)",
+      "url": "https://q3js.com/",
+      "source": "https://github.com/lklacar/q3js",
+      "http": 200,
+      "final_url": "https://q3js.com/",
+      "title": "Play Quake III Arena in Your Browser | Q3JS",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "QuakeWorld",
+      "url": "http://q1.pieter.com",
+      "source": null,
+      "http": 200,
+      "final_url": "https://q1.pieter.com/",
+      "title": "QuakeWorld Multiplayer Online - q1.pieter.com (Non-commercial and unofficial)",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Resident Evil 4",
+      "url": "https://residentevil4.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://residentevil4.online/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Resident Evil Outbreak File #1 & #2 (Outbreak Web)",
+      "url": "https://outbreakweb.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://outbreakweb.com/",
+      "title": "Resident Evil Outbreak",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Return to Castle Wolfenstein",
+      "url": "https://wwasm.m-h.org.uk/",
+      "source": "https://github.com/GMH-Code/Wwasm",
+      "http": 200,
+      "final_url": "https://wwasm.m-h.org.uk/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Return to Castle Wolfenstein (rtcw.pieter.com)",
+      "url": "http://rtcw.pieter.com",
+      "source": null,
+      "http": 200,
+      "final_url": "https://rtcw.pieter.com/",
+      "title": "Return to Castle Wolfenstein Multiplayer Online - rtcw.pieter.com (Non-commercial and unofficial)",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Road Rash (Three.js)",
+      "url": "https://roadrash.pages.dev/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://roadrash.pages.dev/",
+      "title": "Road Rash — Play in Your Browser",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Silent Hill: Origins",
+      "url": "https://silenthillorigins.zeliaopen.space/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://silenthillorigins.zeliaopen.space/",
+      "title": "Silent Hill Origins — Arranque automático",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": true
+      }
+    },
+    {
+      "name": "SimCity (micropolisJS)",
+      "url": "https://www.graememcc.co.uk/micropolisJS/",
+      "source": "https://github.com/graememcc/micropolisJS",
+      "http": 200,
+      "final_url": "https://www.graememcc.co.uk/micropolisJS/",
+      "title": "micropolisJS",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "The Simpsons: Hit & Run",
+      "url": "http://shar-wasm.cjoseph.workers.dev/?skipmovie",
+      "source": null,
+      "http": 200,
+      "final_url": "http://shar-wasm.cjoseph.workers.dev/?skipmovie",
+      "title": "The Simpsons: Hit &amp; Run - WASM",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "The Simpsons: Hit & Run (shar-wasm)",
+      "url": "https://shar-wasm.cjoseph.workers.dev/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://shar-wasm.cjoseph.workers.dev/",
+      "title": "The Simpsons: Hit &amp; Run - WASM",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "The Simpsons: Hit & Run (Web Port)",
+      "url": "https://vheissu.github.io/hit-and-run-web/",
+      "source": "https://github.com/Vheissu/hit-and-run-web",
+      "http": 200,
+      "final_url": "https://vheissu.github.io/hit-and-run-web/",
+      "title": "The Simpsons: Hit & Run",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "The Simpsons: Hit & Run (with mod support)",
+      "url": "https://shar.harshvirdhaliwal.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://shar.harshvirdhaliwal.com/",
+      "title": "Hit &amp; Run · 7c897df4199041c2",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Skate × Rust (Global Terror)",
+      "url": "https://global-terror.net/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://global-terror.net/",
+      "title": "\n      TERRORDOTNET\n",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Skate 3",
+      "url": "http://skate.aaddpp.lol",
+      "source": null,
+      "http": 200,
+      "final_url": "https://skate.aaddpp.lol/",
+      "title": "skate. 3 — Fan Game",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Sonic CD (Sonic-CD-WASM)",
+      "url": "https://tws2401.github.io/Sonic-CD-WASM/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://tws2401.github.io/Sonic-CD-WASM/",
+      "title": "Sonic CD",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Sonic Robo Blast 2",
+      "url": "https://afd2025.srb2.org/",
+      "source": "https://github.com/chromaticpipe/SRB2-WASM",
+      "http": null,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "Sonic Robo Blast 2 Kart",
+      "url": "https://skyleite.github.io/Kart-Public-WASM/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://skyleite.github.io/Kart-Public-WASM/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Sonic the Fighters",
+      "url": "https://play.sonicthefighte.rs/",
+      "source": null,
+      "http": null,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "Sonic the Hedgehog (2013)",
+      "url": "https://vinmannie.github.io/Sonic-1-WASM/",
+      "source": "https://github.com/VinMannie/Sonic-1-WASM",
+      "http": 200,
+      "final_url": "https://vinmannie.github.io/Sonic-1-WASM/",
+      "title": "Sonic the Hedgehog",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Sonic the Hedgehog 4: Episode I",
+      "url": "https://wamwoowam.co.uk/sonic4/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://wamwoowam.co.uk/sonic4/",
+      "title": "Sonic the Hedgehog 4 - Episode I",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Sonic Worlds Next",
+      "url": "https://grubbyplaya.github.io/Sonic-Worlds-Next-WASM/Sonic%20Worlds%20Next.html",
+      "source": null,
+      "http": 200,
+      "final_url": "https://grubbyplaya.github.io/Sonic-Worlds-Next-WASM/Sonic%20Worlds%20Next.html",
+      "title": "Sonic Worlds Next",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Spelunky Classic HD",
+      "url": "https://yancharkin.itch.io/spelunky-classic-hd",
+      "source": null,
+      "http": 200,
+      "final_url": "https://yancharkin.itch.io/spelunky-classic-hd",
+      "title": "Spelunky Classic HD by yancharkin",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Street Fighter Anniversary Collection",
+      "url": "https://streetfighteranniversary.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://streetfighteranniversary.online/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Street Fighter III: 3rd Strike",
+      "url": "https://streetfighter3.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://streetfighter3.online/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Super Mario 64 (multiplayer, olivers.tools)",
+      "url": "https://olivers.tools/?play",
+      "source": null,
+      "http": 200,
+      "final_url": "https://olivers.tools/?play",
+      "title": "Oliver Sauter | Executive Capacity",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Super Mario 64 (sm3das)",
+      "url": "https://heyitsheart.github.io/sm3das/64/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://heyitsheart.github.io/sm3das/64/",
+      "title": "Super Mario 64",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Super Mario 64 Multiplayer",
+      "url": "https://olivers.tools/play/",
+      "source": null,
+      "http": null,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "name": "Super Mario Kart (SM-Kart-ZX Web Port)",
+      "url": "https://burnedpopcorn.github.io/SM-Kart-ZX-Web-Port/index.html",
+      "source": null,
+      "http": 200,
+      "final_url": "https://burnedpopcorn.github.io/SM-Kart-ZX-Web-Port/index.html",
+      "title": "Super Mario Kart Remake",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Super Mario Sunshine",
+      "url": "https://truffled.lol/games/sms/index.html",
+      "source": null,
+      "http": 200,
+      "final_url": "https://truffled.lol/games/sms/index.html",
+      "title": "Super Mario Sunshine",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Super Mario Zombies",
+      "url": "https://smz.fun/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://smz.fun/",
+      "title": "Super Mario Zombies",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Tekken 4",
+      "url": "https://tekken4.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://tekken4.online/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Tekken 5",
+      "url": "https://tekken5.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://tekken5.online/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Tekken: Dark Resurrection",
+      "url": "https://tekkendr.live/",
+      "source": null,
+      "http": null,
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "name": "Terraria (3)",
+      "url": "https://playterraria.lol/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://playterraria.lol/",
+      "title": "Terraria",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Tony Hawk's Pro Skater 3",
+      "url": "https://tonyhawkpro3.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://tonyhawkpro3.online/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Tony Hawk's Underground 2",
+      "url": "https://tonyhawksunderground2.online/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://tonyhawksunderground2.online/",
+      "title": "",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Tekken 5: Dark Resurrection (Recomp)",
+      "url": "https://tkdr-recomp.pages.dev/",
+      "source": "https://github.com/gasparegas/tkdr-recomp",
+      "http": 200,
+      "final_url": "https://tkdr-recomp.pages.dev/",
+      "title": "tkdr",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Terraria (2)",
+      "url": "https://terraria.mercurywork.shop/",
+      "source": "https://github.com/web-ports/terraria",
+      "http": 200,
+      "final_url": "https://terraria.mercurywork.shop/",
+      "title": "Terrarium",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Tyrian (OpenTyrian)",
+      "url": "https://midzer.de/wasm/opentyrian/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://midzer.de/wasm/opentyrian/",
+      "title": "OpenTyrian",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "WipEout",
+      "url": "https://phoboslab.org/wipegame/",
+      "source": "https://github.com/phoboslab/wipeout-rewrite",
+      "http": 200,
+      "final_url": "https://phoboslab.org/wipegame/",
+      "title": "wipEout",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Wolfenstein 3D (HTML5, lazarv)",
+      "url": "https://wolf3d.wadcmd.com/",
+      "source": "https://github.com/lazarv/wolf3d",
+      "http": 200,
+      "final_url": "https://wadcmd.com/",
+      "title": "WAD Commander",
+      "signals": {
+        "canvas": false,
+        "iframe": true,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Zelda II: The Adventure of Link (z2rs)",
+      "url": "https://z2rs.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://z2rs.com/",
+      "title": "z2rs — Zelda II reconstruction (web)",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "GTA V · PlayGTA5",
+      "url": "https://playgta5.pro/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://playgta5.pro/",
+      "title": "PlayGTA5: Play GTA V Online in Your Browser, Free",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": true,
+        "webgpu": true
+      }
+    },
+    {
+      "name": "NFS Underground",
+      "url": "https://nfsu.yurasm.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://nfsu.yurasm.com/",
+      "title": "NFS Underground | Browser Edition",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Porsche · BottleShip",
+      "url": "https://bottleship.happydog.games/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://bottleship.happydog.games/",
+      "title": "BottleShip",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "QuakeWorld",
+      "url": "https://q1.pieter.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://q1.pieter.com/",
+      "title": "QuakeWorld Multiplayer Online - q1.pieter.com (Non-commercial and unofficial)",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Urban Terror",
+      "url": "https://ut.pieter.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://ut.pieter.com/",
+      "title": "Urban Terror Multiplayer Online - ut.pieter.com (Non-commercial and unofficial)",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Return to Castle Wolfenstein",
+      "url": "https://rtcw.pieter.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://rtcw.pieter.com/",
+      "title": "Return to Castle Wolfenstein Multiplayer Online - rtcw.pieter.com (Non-commercial and unofficial)",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Freeciv-web",
+      "url": "https://www.freecivweb.com/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://www.freecivweb.com/",
+      "title": "Freeciv-web - open source turn-based strategy game",
+      "signals": {
+        "canvas": false,
+        "iframe": true,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "OpenTTD Online",
+      "url": "https://swords02.github.io/openttd-online/play",
+      "source": null,
+      "http": 200,
+      "final_url": "https://swords02.github.io/openttd-online/play/",
+      "title": "OpenTTD Online",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": true,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "RA2WEB",
+      "url": "https://ra2web.github.io/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://ra2web.github.io/",
+      "title": "王二火大-联机对战平台",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "Red Alert original art Chinese",
+      "url": "https://red-alert-web-game.app.workbuddy.host/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://red-alert-web-game.app.workbuddy.host/",
+      "title": "红警网页复刻版",
+      "signals": {
+        "canvas": true,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    },
+    {
+      "name": "OpenLara",
+      "url": "https://xproger.info/projects/OpenLara/",
+      "source": null,
+      "http": null,
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "name": "Minecraft Classic",
+      "url": "https://classic.minecraft.net/",
+      "source": null,
+      "http": 200,
+      "final_url": "https://classic.minecraft.net/",
+      "title": "Minecraft Classic",
+      "signals": {
+        "canvas": false,
+        "iframe": false,
+        "game_files": false,
+        "dmca": false,
+        "certificate": false,
+        "webgpu": false
+      }
+    }
+  ],
+  "browserTests": [
+    {
+      "game": "GTA V",
+      "url": "https://playgta5.pro/",
+      "result": "Launcher aberto; cliques em Play não chegaram à partida nesta sessão. Anúncios observados. Nenhum certificado ou programa instalado."
+    },
+    {
+      "game": "NFS Most Wanted",
+      "url": "https://web.nfsmwo.com/",
+      "result": "Tela inicial carregada; início solo acionado; runtime encerrou com código 0x1. Corrida não validada."
+    },
+    {
+      "game": "PES 6",
+      "url": "https://pes6.optijuegos.net/",
+      "result": "Seletor de início carregado; início sem narração falhou por adaptador WebGPU indisponível no navegador remoto."
+    }
+  ]
+}
