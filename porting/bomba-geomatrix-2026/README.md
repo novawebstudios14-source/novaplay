@@ -43,3 +43,7 @@ Use Git, Python 3, CMake, Ninja, Clang com C++20 e Emscripten 6.0.11 para a vers
 Execute `build-local.sh /caminho/ps2-web-recomp /caminho/copia-propria.iso --skip-opening` para repetir o teste com a abertura pulada. Sem a opção, a abertura original é mantida. Sempre confira os logs e os frames: alcançar o limite de quadros não certifica gameplay.
 
 O diretório não inclui ISO, executável comercial, código traduzido do jogo ou build jogável. O Bomba Patch e o jogo-base mantêm seus autores e créditos; NovaPlay identifica este trabalho de adaptação.
+
+## Captura ampliada durante a partida
+
+O teste de carregamento alcançou código além do limite original de 256 KiB. Para repetir a análise do mesmo estado de RAM, use `python3 capture-region.py /caminho/ram.bin /caminho/games/bomba-geomatrix-2026 940000 c78000 972330`, seguido de `entry-hints.py` e da tradução. Esses limites foram observados nesta edição; não são um mapa universal de outros jogos. O arquivo capturado contém bytes comerciais e permanece local. A ferramenta preserva a origem e não certifica o funcionamento da partida.

@@ -162,15 +162,15 @@ index 6370a3a..9dc8dfc 100755
  echo "== [3/6] machine code to C++"
  touch "$game/entries.txt"
 diff --git a/scripts/windows.py b/scripts/windows.py
-index 542fc09..5c81f06 100644
+index 542fc09..ea485ba 100644
 --- a/scripts/windows.py
 +++ b/scripts/windows.py
-@@ -95,5 +95,35 @@ def main() -> None:
+@@ -95,5 +95,36 @@ def main() -> None:
                  open(misses, 'w').write('\n'.join(names.get(t, t) for t in lines) + '\n')
  
  
 +    # A reached overlay can extend past the declared starts/capture cap.
-+    # Capture only the reached 16 KiB page, rather than translating arbitrary RAM.
++    # Capture only the reached 64 KiB region, rather than translating arbitrary RAM.
 +    if misses and os.path.exists(misses):
 +        lines = open(misses).read().split()
 +        rewritten = []
@@ -183,10 +183,11 @@ index 542fc09..5c81f06 100644
 +                   for v in load_phdrs(elf)):
 +                rewritten.append(token)
 +                continue
-+            base = pc & ~(UNIT - 1)
-+            if pc & 3 or base + UNIT > min(len(dump), 0x2000000):
++            reached_size = 0x10000
++            base = pc & ~(reached_size - 1)
++            if pc & 3 or base + reached_size > min(len(dump), 0x2000000):
 +                raise ValueError('Reached entry is outside aligned EE RAM')
-+            blob = dump[base:base + UNIT]
++            blob = dump[base:base + reached_size]
 +            if not any(blob[pc - base:pc - base + 64]):
 +                raise ValueError('Reached entry points to an empty instruction')
 +            stem = '%08X_%08X' % (base, binascii.crc32(blob) & 0xFFFFFFFF)
@@ -194,7 +195,7 @@ index 542fc09..5c81f06 100644
 +            path = os.path.join(outdir, stem + '.bin')
 +            if not os.path.exists(path):
 +                open(path, 'wb').write(blob)
-+                print('captured reached page %s, %d bytes' % (stem, UNIT))
++                print('captured reached region %s, %d bytes' % (stem, reached_size))
 +            rewritten.append('%s:%x' % (stem, pc - base))
 +        open(misses, 'w').write('\n'.join(rewritten) + '\n')
 +

@@ -13,7 +13,7 @@ with tempfile.TemporaryDirectory() as d:
     struct.pack_into('<HH',elf,42,32,1)
     # A declared window at 0x10000 stops before the reached 0x60010 entry.
     struct.pack_into('<8I',elf,52,1,0,0x10000,0,0,0x4000,5,16)
-    ram=bytearray(0x64000)
+    ram=bytearray(0x70000)
     struct.pack_into('<4I',ram,0x60010,0x3c030058,0x03e00008,0xa0642a32,0)
     (root/'game.elf').write_bytes(elf)
     (root/'ram.bin').write_bytes(ram)
@@ -23,5 +23,5 @@ with tempfile.TemporaryDirectory() as d:
     stem,offset=token.split(':')
     assert stem.startswith('00060000_') and int(offset,16)==0x10
     blob=(root/'overlays'/(stem+'.bin')).read_bytes()
-    assert len(blob)==0x4000 and blob[0x10:0x20]==ram[0x60010:0x60020]
+    assert len(blob)==0x10000 and blob[0x10:0x20]==ram[0x60010:0x60020]
 print('Reached overlay entry beyond declared windows captured correctly')

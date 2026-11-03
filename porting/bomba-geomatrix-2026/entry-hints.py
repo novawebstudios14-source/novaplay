@@ -37,6 +37,35 @@ def add_hints(game):
             if source.is_file() and 0 <= int(offset, 16) < source.stat().st_size and token not in known:
                 known.add(token)
                 added.append(token)
+    # Larger captures overlap earlier reached pages. Preserve their observed
+    # entries when the instruction bytes match, so a broad image cannot hide
+    # a previously translated leaf function in a smaller capture.
+    images = {}
+    for token in known:
+        stem, sep, off = token.partition(':')
+        if not sep or '/' in stem or '\\' in stem:
+            continue
+        source = game / 'overlays' / (stem + '.bin')
+        if source.is_file() and stem not in images:
+            images[stem] = source.read_bytes()
+    entries = []
+    for token in known:
+        stem, sep, off = token.partition(':')
+        if sep and stem in images:
+            offset = int(off, 16)
+            if offset + 16 <= len(images[stem]):
+                entries.append((int(stem[:8], 16) + offset, images[stem][offset:offset+16]))
+    for stem, data in images.items():
+        if len(data) < 0x100000:
+            continue
+        base = int(stem[:8], 16)
+        for address, signature in entries:
+            offset = address - base
+            if 0 <= offset and offset + 16 <= len(data) and data[offset:offset+16] == signature:
+                token = f'{stem}:{offset:x}'
+                if token not in known:
+                    known.add(token)
+                    added.append(token)
     stems = {token.split(':', 1)[0] for token in known if ':' in token}
     for stem in sorted(stems):
         if '/' in stem or '\\' in stem:
