@@ -24,7 +24,7 @@ const games = [
     "kind": "Remaster de fãs · beta web",
     "summary": "Revisite Angel Island no remaster de fãs de Sonic 3 & Knuckles, com beta para navegador.",
     "notes": "Beta web de Sonic 3 A.I.R. distribuída por Sappharad e indicada no site do projeto. Exige o arquivo Sonic_Knuckles_wSonic3.bin de uma cópia própria compatível; o NovaPlay não fornece esse arquivo. O seletor da ROM foi observado no teste. Sem arquivo próprio nesta sessão, a partida não foi iniciada. O autor registra limitações de estabilidade e diferenças na disponibilidade da trilha remasterizada.",
-    "requirements": "Arquivo próprio compatível Sonic_Knuckles_wSonic3.bin. Consulte as instruções do autor antes de abrir.",
+    "requirements": "Arquivo Sonic_Knuckles_wSonic3.bin compatível com Sonic 3 A.I.R.",
     "inputs": [
       "Teclado",
       "Controle"
@@ -39,7 +39,20 @@ const games = [
     "artImageSource": "https://projects.sappharad.com/s3air_ios/20260328_beta/icon.png",
     "desc": "Beta web de Sonic 3 A.I.R. distribuída por Sappharad e indicada no site do projeto. Exige o arquivo Sonic_Knuckles_wSonic3.bin de uma cópia própria compatível; o NovaPlay não fornece esse arquivo. O seletor da ROM foi observado no teste. Sem arquivo próprio nesta sessão, a partida não foi iniciada. O autor registra limitações de estabilidade e diferenças na disponibilidade da trilha remasterizada.",
     "discoverySource": "https://projects.sappharad.com/s3air_ios/",
-    "searchText": "Sonic 3 & Knuckles Sonic 3 & Knuckles · A.I.R. Web Beta Revisite Angel Island no remaster de fãs de Sonic 3 & Knuckles, com beta para navegador."
+    "searchText": "Sonic 3 & Knuckles Sonic 3 & Knuckles · A.I.R. Web Beta Revisite Angel Island no remaster de fãs de Sonic 3 & Knuckles, com beta para navegador.",
+    "fileGuide": {
+      "description": "O projeto usa a ROM da edição antiga de Sonic 3 & Knuckles para Steam. Se você já possui essa edição, siga o guia para localizar o arquivo. Não há uma compra digital compatível confirmada aqui; Sonic Origins não é apresentado como substituto.",
+      "links": [
+        {
+          "label": "Como localizar o arquivo · guia do projeto",
+          "url": "https://projects.sappharad.com/s3air_ios/"
+        },
+        {
+          "label": "Requisitos oficiais do Sonic 3 A.I.R.",
+          "url": "https://sonic3air.org/"
+        }
+      ]
+    }
   },
   {
     "color": "#4a3580",
@@ -82,88 +95,6 @@ const games = [
     "desc": "A página oferece Dune II com seleção de casa e controles de saves. No teste, foi possível escolher Atreides, avançar da apresentação e observar o cenário da missão. A sessão mostrou uma mensagem de missão concluída rapidamente; progressão, economia e combate não foram validados. O serviço externo administra o carregamento e os saves; suas condições se aplicam.",
     "discoverySource": "https://dune2js.com/",
     "searchText": "Dune II: The Building of a Dynasty Dune II · OpenDUNE Web Escolha uma casa e reencontre a disputa pela especiaria no clássico de estratégia em Arrakis."
-  },
-  {
-    "color": "#4a3580",
-    "symbol": "✦",
-    "checked": "2026-11-03",
-    "http": 200,
-    "devices": [
-      "PC"
-    ],
-    "multiplayer": true,
-    "artFit": "contain",
-    "artKind": "project",
-    "artDescription": "Imagem de identificação publicada pelo projeto indicado. Não comprova funcionamento em todos os aparelhos.",
-    "screenshots": [],
-    "device": "Compatibilidade varia conforme o navegador",
-    "id": "curated-pac-man",
-    "name": "PAC-MAN · Google Doodle",
-    "title": "PAC-MAN",
-    "slug": "pac-man-google-doodle",
-    "cat": "Arcade",
-    "sub": "ARCADE",
-    "url": "https://www.google.com/logos/2010/pacman10-hp.html",
-    "source": "https://doodles.google/doodle/30th-anniversary-of-pac-man/?hl=pt-BR",
-    "kind": "Edição comemorativa do Google",
-    "summary": "O clássico dos labirintos na edição de 30 anos criada para o Google Doodle.",
-    "notes": "Edição comemorativa de 2010 publicada pelo Google, com labirinto inspirado no logo Google; não é a ROM original de arcade. No teste, Insert Coin iniciou o jogo, o personagem e os fantasmas apareceram e a pontuação passou de 0 para 10 após comandos nas setas. Isso confirma apenas uma sessão curta; fases posteriores não foram testadas. O autor descreve uma opção local de dois jogadores, não testada nesta sessão.",
-    "requirements": "Abre no navegador sem arquivo próprio. Use Insert Coin e as setas do teclado.",
-    "inputs": [
-      "Teclado"
-    ],
-    "graphics": "HTML5",
-    "access": "browser",
-    "testLevel": "gameplay",
-    "status": "Sessão curta observada",
-    "verification": "Sessão curta iniciada em 03/11/2026: labirinto, personagens, movimentação e pontuação de 10 observados. Não houve teste de todas as fases.",
-    "artSource": "https://doodles.google/doodle/30th-anniversary-of-pac-man/?hl=pt-BR",
-    "art": "assets/curated-pac-man.webp",
-    "artImageSource": "https://lh3.googleusercontent.com/H8hhcUas7f9Pi4aMLTQfSTVk1wwE1d_SPYYGldXn9S8GARJis2ED4EpnIfXzfBhTP8KZM64bFnmgowpU3Ct7b7OznwcRakNOM3mB2KRr=s660",
-    "desc": "Edição comemorativa de 2010 publicada pelo Google, com labirinto inspirado no logo Google; não é a ROM original de arcade. No teste, Insert Coin iniciou o jogo, o personagem e os fantasmas apareceram e a pontuação passou de 0 para 10 após comandos nas setas. Isso confirma apenas uma sessão curta; fases posteriores não foram testadas. O autor descreve uma opção local de dois jogadores, não testada nesta sessão.",
-    "discoverySource": "https://doodles.google/doodle/30th-anniversary-of-pac-man/?hl=pt-BR",
-    "searchText": "PAC-MAN PAC-MAN · Google Doodle O clássico dos labirintos na edição de 30 anos criada para o Google Doodle."
-  },
-  {
-    "color": "#4a3580",
-    "symbol": "✦",
-    "checked": "2026-11-03",
-    "http": 200,
-    "devices": [
-      "PC"
-    ],
-    "multiplayer": false,
-    "artFit": "contain",
-    "artKind": "project",
-    "artDescription": "Imagem de identificação publicada pelo projeto indicado. Não comprova funcionamento em todos os aparelhos.",
-    "screenshots": [],
-    "device": "Compatibilidade varia conforme o navegador",
-    "id": "curated-tetris",
-    "name": "Tetris · Marathon oficial",
-    "title": "Tetris",
-    "slug": "tetris-marathon",
-    "cat": "Puzzle",
-    "sub": "PUZZLE",
-    "url": "https://play.tetris.com/games/marathon/",
-    "source": "https://play.tetris.com/games/",
-    "kind": "Edição web oficial",
-    "summary": "A edição oficial Marathon de Tetris: organize as peças e tente superar sua pontuação.",
-    "notes": "Edição web oficial atual, diferente das versões antigas de Game Boy ou NES. A página foi acessada a partir do catálogo oficial. Neste navegador remoto o jogador exibiu “Your browser does not support WebGL”; a partida não começou. Use um navegador e dispositivo com WebGL disponível. A página possui anúncios e preferências de cookies administrados pelo serviço externo.",
-    "requirements": "Navegador com WebGL disponível. Não exige arquivo próprio no fluxo observado.",
-    "inputs": [
-      "Não informado"
-    ],
-    "graphics": "WebGL",
-    "access": "browser",
-    "testLevel": "limited",
-    "status": "Limitado por WebGL no teste",
-    "verification": "Página oficial e player observados em 03/11/2026. O player informou ausência de suporte a WebGL neste navegador remoto; partida não validada.",
-    "artSource": "https://play.tetris.com/games/",
-    "art": "assets/curated-tetris.webp",
-    "artImageSource": "https://play.tetris.com/games/_assets/brand/tetris-logo-main.png?v=ce88ff31",
-    "desc": "Edição web oficial atual, diferente das versões antigas de Game Boy ou NES. A página foi acessada a partir do catálogo oficial. Neste navegador remoto o jogador exibiu “Your browser does not support WebGL”; a partida não começou. Use um navegador e dispositivo com WebGL disponível. A página possui anúncios e preferências de cookies administrados pelo serviço externo.",
-    "discoverySource": "https://play.tetris.com/games/",
-    "searchText": "Tetris Tetris · Marathon oficial A edição oficial Marathon de Tetris: organize as peças e tente superar sua pontuação."
   },
   {
     "status": "Limitado no teste",
@@ -652,7 +583,7 @@ const games = [
     "device": "Computador recomendado · compatibilidade varia",
     "verification": "HTTP 200 em 03/11/2026; partida não testada.",
     "kind": "Arquivos próprios",
-    "requirements": "Exige arquivos de uma cópia sua.",
+    "requirements": "Imagem XISO compatível de um disco próprio de Halo: Combat Evolved para Xbox original.",
     "checked": "2026-11-03",
     "http": 200,
     "discoverySource": "https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports",
@@ -678,7 +609,16 @@ const games = [
     "artImageSource": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2r2r.jpg",
     "artKind": "original",
     "artFit": "contain",
-    "artDescription": "Arte do título original, usada para identificação. Não representa uma captura do port de navegador."
+    "artDescription": "Arte do título original, usada para identificação. Não representa uma captura do port de navegador.",
+    "fileGuide": {
+      "description": "Você precisa de uma cópia do disco original e de uma imagem XISO compatível preparada a partir dela. O Combat Lab oferece o caminho para as instruções de cópia da comunidade em “disc-ripping instructions”. A edição PC e a Master Chief Collection não são indicadas como fontes compatíveis.",
+      "links": [
+        {
+          "label": "Preparar sua cópia do disco · Combat Lab",
+          "url": "https://mitchellhynes.com/combat-lab/"
+        }
+      ]
+    }
   },
   {
     "id": "port-10",
@@ -906,7 +846,7 @@ const games = [
     "device": "Computador recomendado · compatibilidade varia",
     "verification": "HTTP 200 em 03/11/2026; partida não testada.",
     "kind": "Arquivos próprios",
-    "requirements": "Exige arquivos de uma cópia sua.",
+    "requirements": "Arquivo do disco original de Crash Team Racing para PlayStation, no formato aceito pelo projeto.",
     "checked": "2026-11-03",
     "http": 200,
     "discoverySource": "https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports",
@@ -930,7 +870,16 @@ const games = [
     "artImageSource": "https://m.media-amazon.com/images/M/MV5BNTFmMGI3OTUtZTJiZS00ZDNlLTk1NjItYWJkZmJiNmMxMTY5XkEyXkFqcGc%40._V1_FMjpg_UX1000_.jpg",
     "artKind": "original",
     "artFit": "cover",
-    "artDescription": "Arte do título original, usada para identificação. Não representa uma captura do port de navegador."
+    "artDescription": "Arte do título original, usada para identificação. Não representa uma captura do port de navegador.",
+    "fileGuide": {
+      "description": "Use sua cópia do Crash Team Racing original de PlayStation e confira as instruções do projeto antes de preparar o arquivo. A página também possui um campo “Online Key File”; confira os requisitos para jogar online. O remake Nitro-Fueled não é indicado como fonte compatível.",
+      "links": [
+        {
+          "label": "Requisitos e importação do disco · High Octane",
+          "url": "https://rinnegatamante.github.io/Crash-Team-Racing-High-Octane/"
+        }
+      ]
+    }
   },
   {
     "id": "port-16",
@@ -1480,7 +1429,7 @@ const games = [
     "device": "Computador recomendado · compatibilidade varia",
     "verification": "HTTP 200 em 03/11/2026; partida não testada.",
     "kind": "Arquivos próprios",
-    "requirements": "Exige arquivos de uma cópia sua.",
+    "requirements": "Arquivos próprios da instalação de Half-Life (pasta valve) e/ou Counter-Strike 1.6 (cstrike).",
     "checked": "2026-11-03",
     "http": 200,
     "discoverySource": "https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports",
@@ -1504,7 +1453,24 @@ const games = [
     "artImageSource": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/70/header.jpg?t=1745368462",
     "artKind": "original",
     "artFit": "cover",
-    "artDescription": "Arte do título original, usada para identificação. Não representa uma captura do port de navegador."
+    "artDescription": "Arte do título original, usada para identificação. Não representa uma captura do port de navegador.",
+    "fileGuide": {
+      "description": "Compre e instale a edição original na Steam ou use sua instalação existente. No WebXash, selecione a pasta principal que contém valve e/ou cstrike, ou prepare o ZIP conforme o guia. A compra fornece os arquivos do jogo; o funcionamento no navegador depende do port.",
+      "links": [
+        {
+          "label": "Comprar Half-Life · Steam",
+          "url": "https://store.steampowered.com/app/70/HalfLife/"
+        },
+        {
+          "label": "Comprar Counter-Strike 1.6 · Steam",
+          "url": "https://store.steampowered.com/app/10/CounterStrike/"
+        },
+        {
+          "label": "Como importar as pastas · guia WebXash",
+          "url": "https://github.com/x8bitrain/webXash#how-to-use"
+        }
+      ]
+    }
   },
   {
     "id": "port-30",
@@ -4382,4 +4348,4 @@ const games = [
     "artDescription": "Imagem ou ícone publicado pelo criador, usado para identificação do jogo."
   }
 ];
-const audit = {"date":"2026-11-03","indexEntries":984,"indexLaunchLinks":557,"checkedDestinations":164,"httpSuccess":155,"catalogEntries":106,"method":"Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo. Ampliação: 24 páginas de jogos e criadores responderam HTTP 200 em 03/11/2026; as partidas dessas novas entradas não foram testadas.","sources":["https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports","https://github.com/HarshitWaldia/Browser-Games-Directory","https://portedgames.com/browser/","https://playgta5.pro/games","https://github.com/jenissimo/bottleship","https://play2048.co/","https://hexgl.bkcore.com/play/","https://adarkroom.doublespeakgames.com/","https://orteil.dashnet.org/cookieclicker/","https://www.decisionproblem.com/paperclips/","https://ivark.github.io/AntimatterDimensions/","https://sandspiel.club/","https://sandboxels.r74n.com/","https://shapez.io/","https://kodub.itch.io/polytrack","https://ninja-muffin24.itch.io/funkin","https://maddymakesgamesinc.itch.io/celesteclassic","https://littlealchemy2.com/","https://neal.fun/infinite-craft/","https://slowroads.io/","https://skribbl.io/","https://garticphone.com/","https://smashkarts.io/","https://shellshock.io/","http://slither.io/?a","https://0hh1.com/","https://0hn0.com/","https://ducklings.io/","https://teamwood.itch.io/super-auto-pets","https://github.com/AgentiLoop/MarioKart64JS","https://github.com/andrewnakas/oot-cleanroom","https://projects.sappharad.com/s3air_ios/","https://dune2js.com/","https://doodles.google/doodle/30th-anniversary-of-pac-man/?hl=pt-BR","https://play.tetris.com/games/"],"browserTests":[{"game":"GTA V","url":"https://playgta5.pro/","result":"Launcher aberto; cliques em Play não chegaram à partida nesta sessão. Anúncios observados. Nenhum certificado ou programa instalado."},{"game":"NFS Most Wanted","url":"https://web.nfsmwo.com/","result":"Tela inicial carregada; início solo acionado; runtime encerrou com código 0x1. Corrida não validada."},{"game":"PES 6","url":"https://pes6.optijuegos.net/","result":"Seletor de início carregado; início sem narração falhou por adaptador WebGPU indisponível no navegador remoto."}]};
+const audit = {"date":"2026-11-03","indexEntries":984,"indexLaunchLinks":557,"checkedDestinations":164,"httpSuccess":155,"catalogEntries":104,"method":"Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo. Ampliação: 24 páginas de jogos e criadores responderam HTTP 200 em 03/11/2026; as partidas dessas novas entradas não foram testadas.","sources":["https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports","https://github.com/HarshitWaldia/Browser-Games-Directory","https://portedgames.com/browser/","https://playgta5.pro/games","https://github.com/jenissimo/bottleship","https://play2048.co/","https://hexgl.bkcore.com/play/","https://adarkroom.doublespeakgames.com/","https://orteil.dashnet.org/cookieclicker/","https://www.decisionproblem.com/paperclips/","https://ivark.github.io/AntimatterDimensions/","https://sandspiel.club/","https://sandboxels.r74n.com/","https://shapez.io/","https://kodub.itch.io/polytrack","https://ninja-muffin24.itch.io/funkin","https://maddymakesgamesinc.itch.io/celesteclassic","https://littlealchemy2.com/","https://neal.fun/infinite-craft/","https://slowroads.io/","https://skribbl.io/","https://garticphone.com/","https://smashkarts.io/","https://shellshock.io/","http://slither.io/?a","https://0hh1.com/","https://0hn0.com/","https://ducklings.io/","https://teamwood.itch.io/super-auto-pets","https://github.com/AgentiLoop/MarioKart64JS","https://github.com/andrewnakas/oot-cleanroom","https://projects.sappharad.com/s3air_ios/","https://dune2js.com/","https://doodles.google/doodle/30th-anniversary-of-pac-man/?hl=pt-BR","https://play.tetris.com/games/"],"browserTests":[{"game":"GTA V","url":"https://playgta5.pro/","result":"Launcher aberto; cliques em Play não chegaram à partida nesta sessão. Anúncios observados. Nenhum certificado ou programa instalado."},{"game":"NFS Most Wanted","url":"https://web.nfsmwo.com/","result":"Tela inicial carregada; início solo acionado; runtime encerrou com código 0x1. Corrida não validada."},{"game":"PES 6","url":"https://pes6.optijuegos.net/","result":"Seletor de início carregado; início sem narração falhou por adaptador WebGPU indisponível no navegador remoto."}]};

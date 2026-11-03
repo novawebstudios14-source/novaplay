@@ -4,7 +4,7 @@
   "indexLaunchLinks": 557,
   "checkedDestinations": 164,
   "httpSuccess": 155,
-  "catalogEntries": 106,
+  "catalogEntries": 104,
   "method": "Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo. Ampliação: 24 páginas de jogos e criadores responderam HTTP 200 em 03/11/2026; as partidas dessas novas entradas não foram testadas.",
   "sources": [
     "https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports",

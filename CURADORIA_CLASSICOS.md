@@ -46,3 +46,7 @@ Os jogos já presentes — como GTA, Half-Life, Halo, DOOM, Quake e Tomb Raider 
 - Sonic Mania: o repositório encontrado não bastou para confirmar uma distribuição web atual e estável. Não foi promovido ao catálogo só por estar em um índice.
 
 A seleção desta rodada se baseia em relevância histórica e identificação das edições. Não se atribuiu prêmio específico a esses quatro jogos sem confirmação na fonte da premiação.
+
+
+## Ajuste solicitado em 03/11/2026
+PAC-MAN e Tetris removidos do catálogo ativo a pedido do usuário. Total atual: 104 entradas. Jogos com arquivos próprios recebem selo, aviso antes de abrir e fontes por edição. Half-Life/CS: compra Steam e guia WebXash; Halo: XISO de disco Xbox próprio; CTR: disco original PS1; Sonic A.I.R.: arquivo compatível da edição antiga citada pelo autor, sem promessa de compra disponível.
