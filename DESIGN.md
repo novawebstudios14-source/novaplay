@@ -25,3 +25,6 @@ The user rejects whitish and washed-out palettes. Use deep black/navy surfaces a
 Homepage hero must keep a fixed height at each breakpoint across every slide. Show only the category, game title, primary links and dot indicators. No arrows, pause button, editorial counter, duplicate title, promotional paragraph or verification copy in the hero; detailed evidence stays on the game page.
 
 Restore the editorial headline, game name and concise description in the fixed-height hero per latest user preference. Keep only dot controls. The brand icon is a gamepad, not an N monogram.
+
+## 2026-11-03 visual refresh
+Immersive dark arcade direction: a larger fixed-height hero, blue-to-purple primary actions, an image-led spotlight rail, photographic collection tiles and framed game cards. Preserve existing links, local library data and evidence descriptions. References reviewed: Steam (https://store.steampowered.com/), Xbox Game Pass (https://www.xbox.com/pt-BR/xbox-game-pass), Poki (https://poki.com/br), CrazyGames (https://www.crazygames.com/br/). These inform hierarchy and browsing patterns, without copying branding.
