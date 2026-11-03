@@ -12,6 +12,21 @@ def add_hints(game):
     path = game / 'entries.txt'
     known = set(path.read_text().split()) if path.exists() else set()
     added = []
+    # Observed entry points from the earlier run of this exact edition.
+    observed = {
+        '008C8000_C15730A9': [0x4320],
+        '00904000_23D0E535': [0x80],
+        '005F8000_C4A90F00': [0x223e0, 0x227b8],
+        '008C8000_249D4946': [0xdc70],
+    }
+    for stem, offsets in observed.items():
+        if not (game / 'overlays' / (stem + '.bin')).is_file():
+            continue
+        for offset in offsets:
+            token = f'{stem}:{offset:x}'
+            if token not in known:
+                known.add(token)
+                added.append(token)
     stems = {token.split(':', 1)[0] for token in known if ':' in token}
     for stem in sorted(stems):
         if '/' in stem or '\\' in stem:
