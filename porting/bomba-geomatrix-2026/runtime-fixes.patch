@@ -91,6 +91,39 @@ index d98afb7..7295735 100644
          const v4i big = f >= 2147483648.0f;
          const v4i back = __builtin_convertvector((v4f)((v4i)f & ~big), v4i);
          const v4i over = big | ((v >= 0) & (back > v)) | ((v < 0) & (back < v));
+diff --git a/runtime/src/gs/raster.cpp b/runtime/src/gs/raster.cpp
+index 6aca80a..e0a24f4 100644
+--- a/runtime/src/gs/raster.cpp
++++ b/runtime/src/gs/raster.cpp
+@@ -360,17 +360,18 @@ Attr attr_of(const Setup &s, const Vertex &v) {
+     return a;
+ }
+ 
+-Attr lerp3(const Attr &a, const Attr &b, const Attr &c, float wa, float wb, float wc) {
++Attr lerp3(const Attr &a, const Attr &b, const Attr &c, float wa, float wb, [[maybe_unused]] float wc) {
++    // Anchor at one vertex so constant depth/alpha remain exact across a triangle.
+     Attr r;
+-    r.r = a.r * wa + b.r * wb + c.r * wc;
+-    r.g = a.g * wa + b.g * wb + c.g * wc;
+-    r.b = a.b * wa + b.b * wb + c.b * wc;
+-    r.a = a.a * wa + b.a * wb + c.a * wc;
+-    r.s = a.s * wa + b.s * wb + c.s * wc;
+-    r.t = a.t * wa + b.t * wb + c.t * wc;
+-    r.q = a.q * wa + b.q * wb + c.q * wc;
+-    r.f = a.f * wa + b.f * wb + c.f * wc;
+-    r.z = a.z * wa + b.z * wb + c.z * wc;
++    r.r = c.r + (a.r - c.r) * wa + (b.r - c.r) * wb;
++    r.g = c.g + (a.g - c.g) * wa + (b.g - c.g) * wb;
++    r.b = c.b + (a.b - c.b) * wa + (b.b - c.b) * wb;
++    r.a = c.a + (a.a - c.a) * wa + (b.a - c.a) * wb;
++    r.s = c.s + (a.s - c.s) * wa + (b.s - c.s) * wb;
++    r.t = c.t + (a.t - c.t) * wa + (b.t - c.t) * wb;
++    r.q = c.q + (a.q - c.q) * wa + (b.q - c.q) * wb;
++    r.f = c.f + (a.f - c.f) * wa + (b.f - c.f) * wb;
++    r.z = c.z + (a.z - c.z) * wa + (b.z - c.z) * wb;
+     return r;
+ }
+ 
 diff --git a/runtime/src/system.cpp b/runtime/src/system.cpp
 index 86f8ca9..905cd05 100644
 --- a/runtime/src/system.cpp
@@ -128,3 +161,44 @@ index 6370a3a..9dc8dfc 100755
  
  echo "== [3/6] machine code to C++"
  touch "$game/entries.txt"
+diff --git a/scripts/windows.py b/scripts/windows.py
+index 542fc09..5c81f06 100644
+--- a/scripts/windows.py
++++ b/scripts/windows.py
+@@ -95,5 +95,35 @@ def main() -> None:
+                 open(misses, 'w').write('\n'.join(names.get(t, t) for t in lines) + '\n')
+ 
+ 
++    # A reached overlay can extend past the declared starts/capture cap.
++    # Capture only the reached 16 KiB page, rather than translating arbitrary RAM.
++    if misses and os.path.exists(misses):
++        lines = open(misses).read().split()
++        rewritten = []
++        for token in lines:
++            if ':' in token:
++                rewritten.append(token)
++                continue
++            pc = int(token, 16)
++            if any(v[0] == 1 and v[4] and v[2] <= pc < v[2] + v[4]
++                   for v in load_phdrs(elf)):
++                rewritten.append(token)
++                continue
++            base = pc & ~(UNIT - 1)
++            if pc & 3 or base + UNIT > min(len(dump), 0x2000000):
++                raise ValueError('Reached entry is outside aligned EE RAM')
++            blob = dump[base:base + UNIT]
++            if not any(blob[pc - base:pc - base + 64]):
++                raise ValueError('Reached entry points to an empty instruction')
++            stem = '%08X_%08X' % (base, binascii.crc32(blob) & 0xFFFFFFFF)
++            os.makedirs(outdir, exist_ok=True)
++            path = os.path.join(outdir, stem + '.bin')
++            if not os.path.exists(path):
++                open(path, 'wb').write(blob)
++                print('captured reached page %s, %d bytes' % (stem, UNIT))
++            rewritten.append('%s:%x' % (stem, pc - base))
++        open(misses, 'w').write('\n'.join(rewritten) + '\n')
++
++
+ if __name__ == '__main__':
+     main()
+\ No newline at end of file

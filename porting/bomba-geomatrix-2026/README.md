@@ -28,11 +28,13 @@ Captura do runner nativo por software. Não é prova de partida nem de funcionam
 
 ## Correções e validação
 
-`runtime-fixes.patch` contém compatibilidade de operações vetoriais com GCC, tratamento de segmentos ELF BSS sem conteúdo, declarações separadas por módulo para reduzir recompilações e progresso opcional do runner por `PS2_PROGRESS=1`.
+`runtime-fixes.patch` contém compatibilidade de operações vetoriais com GCC, tratamento de segmentos ELF BSS sem conteúdo, declarações separadas por módulo para reduzir recompilações e progresso opcional do runner por `PS2_PROGRESS=1`, captura sob demanda de páginas de código além das janelas declaradas e interpolação ancorada no rasterizador para preservar profundidade/alpha constantes.
 
-As três regressões upstream passaram após a mudança do gerador. A normalização vetorial foi comparada em 400.000 casos. O carregador foi testado com reserva vazia fora da RAM, BSS cujo offset ultrapassa EOF e rejeição de dados inválidos. Os testes estão neste diretório.
+As três regressões upstream passaram após a mudança do gerador. A normalização vetorial foi comparada em 400.000 casos. O carregador foi testado com reserva vazia fora da RAM, BSS cujo offset ultrapassa EOF e rejeição de dados inválidos. O teste de interpolação reproduziu deriva em 36.262 amostras antes da correção e passou depois. A captura de entradas além das janelas declaradas também tem regressão aprovada. Os testes estão neste diretório.
 
 `entry-hints.py` adiciona candidatos de entrada somente a imagens de overlays alcançadas. `observed-entries.txt` preserva endereços já observados; não contém código do jogo. Copie ambos para `scripts/` do motor, usando o nome `novaplay_hints.py` para o Python.
+
+A formação executou, mas apresentou faixas gráficas; a correção numérica removeu as faixas na comparação do mesmo estado. Ainda há artefatos, e a partida não foi validada.
 
 ## Construção local
 

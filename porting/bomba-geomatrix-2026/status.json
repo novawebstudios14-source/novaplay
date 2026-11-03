@@ -19,5 +19,7 @@
     "status": "menu reached; match testing pending"
   },
   "nativeTeamSelection": "verified",
-  "nativeMatchSettings": "verified"
+  "nativeMatchSettings": "verified",
+  "renderer": "constant attribute interpolation fixed; residual artifacts under investigation",
+  "dynamicEntryCapture": "reached pages beyond declared windows supported"
 }
