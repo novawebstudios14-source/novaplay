@@ -7,6 +7,7 @@ Objetivo: adaptar o próprio Bomba Patch ao navegador, preservando a experiênci
 - A ISO de referência contém Bomba Patch GeoMatrix de outubro de 2026. O menu identifica a edição como **Bomba Patch 2027**.
 - Boot, telas de memória e abertura observados no runner nativo.
 - **Menu principal observado**: Duelo, Master Liga, Liga, Copa, Treino, Editar e Opções.
+- Navegação, Amistoso, configuração do jogador, seleção dos dois times e configurações da partida observados. Círculo confirma e X retorna nas telas verificadas.
 - A abertura de 719 MB bloqueava a progressão no teste. Foi identificado e testado um salto da chamada da rotina de vídeo, que permitiu chegar ao menu. Esse patch preserva a ISO original e deve ser usado apenas com o executável exato abaixo.
 - A compilação web produziu HTML, JavaScript, Wasm (~28 MiB) e dados (~2,8 MiB). A prévia HTTP não permite o isolamento exigido pela memória compartilhada; o jogo não foi validado no navegador.
 - **Partida ainda não validada. Não há versão jogável publicada.**
@@ -14,6 +15,8 @@ Objetivo: adaptar o próprio Bomba Patch ao navegador, preservando a experiênci
 ![Menu no teste nativo](proof/native-main-menu.png)
 
 Captura do runner nativo por software. Não é prova de partida nem de funcionamento no navegador.
+
+![Seleção dos times no teste nativo](proof/native-team-selection.png)
 
 ## Edição e ferramenta
 

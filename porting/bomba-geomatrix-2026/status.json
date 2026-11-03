@@ -17,5 +17,7 @@
     "expectedInstruction": "0x0C235764",
     "replacement": "0x00000000",
     "status": "menu reached; match testing pending"
-  }
+  },
+  "nativeTeamSelection": "verified",
+  "nativeMatchSettings": "verified"
 }
