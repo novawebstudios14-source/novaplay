@@ -1,17 +1,41 @@
 {
   "date": "2026-11-03",
-  "indexEntries": 954,
-  "indexLaunchLinks": 527,
-  "checkedDestinations": 134,
-  "httpSuccess": 125,
-  "catalogEntries": 76,
-  "method": "Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo.",
+  "indexEntries": 978,
+  "indexLaunchLinks": 551,
+  "checkedDestinations": 158,
+  "httpSuccess": 149,
+  "catalogEntries": 100,
+  "method": "Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo. Ampliação: 24 páginas de jogos e criadores responderam HTTP 200 em 03/11/2026; as partidas dessas novas entradas não foram testadas.",
   "sources": [
     "https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports",
     "https://github.com/HarshitWaldia/Browser-Games-Directory",
     "https://portedgames.com/browser/",
     "https://playgta5.pro/games",
-    "https://github.com/jenissimo/bottleship"
+    "https://github.com/jenissimo/bottleship",
+    "https://play2048.co/",
+    "https://hexgl.bkcore.com/play/",
+    "https://adarkroom.doublespeakgames.com/",
+    "https://orteil.dashnet.org/cookieclicker/",
+    "https://www.decisionproblem.com/paperclips/",
+    "https://ivark.github.io/AntimatterDimensions/",
+    "https://sandspiel.club/",
+    "https://sandboxels.r74n.com/",
+    "https://shapez.io/",
+    "https://kodub.itch.io/polytrack",
+    "https://ninja-muffin24.itch.io/funkin",
+    "https://maddymakesgamesinc.itch.io/celesteclassic",
+    "https://littlealchemy2.com/",
+    "https://neal.fun/infinite-craft/",
+    "https://slowroads.io/",
+    "https://skribbl.io/",
+    "https://garticphone.com/",
+    "https://smashkarts.io/",
+    "https://shellshock.io/",
+    "http://slither.io/?a",
+    "https://0hh1.com/",
+    "https://0hn0.com/",
+    "https://ducklings.io/",
+    "https://teamwood.itch.io/super-auto-pets"
   ],
   "destinations": [
     {
@@ -2076,6 +2100,174 @@
         "certificate": false,
         "webgpu": false
       }
+    },
+    {
+      "name": "2048",
+      "url": "https://play2048.co/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "HexGL",
+      "url": "https://hexgl.bkcore.com/play/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "A Dark Room",
+      "url": "https://adarkroom.doublespeakgames.com/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Cookie Clicker",
+      "url": "https://orteil.dashnet.org/cookieclicker/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Universal Paperclips",
+      "url": "https://www.decisionproblem.com/paperclips/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Antimatter Dimensions",
+      "url": "https://ivark.github.io/AntimatterDimensions/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Sandspiel",
+      "url": "https://sandspiel.club/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Sandboxels",
+      "url": "https://sandboxels.r74n.com/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "shapez · Demo",
+      "url": "https://shapez.io/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "PolyTrack",
+      "url": "https://kodub.itch.io/polytrack",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Friday Night Funkin’",
+      "url": "https://ninja-muffin24.itch.io/funkin",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Celeste Classic",
+      "url": "https://maddymakesgamesinc.itch.io/celesteclassic",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Little Alchemy 2",
+      "url": "https://littlealchemy2.com/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Infinite Craft",
+      "url": "https://neal.fun/infinite-craft/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Slow Roads",
+      "url": "https://slowroads.io/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Skribbl.io",
+      "url": "https://skribbl.io/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Gartic Phone",
+      "url": "https://garticphone.com/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Smash Karts",
+      "url": "https://smashkarts.io/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Shell Shockers",
+      "url": "https://shellshock.io/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Slither.io",
+      "url": "http://slither.io/?a",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "0h h1",
+      "url": "https://0hh1.com/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "0h n0",
+      "url": "https://0hn0.com/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Ducklings.io",
+      "url": "https://ducklings.io/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Super Auto Pets",
+      "url": "https://teamwood.itch.io/super-auto-pets",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 em 03/11/2026; partida não testada."
     }
   ],
   "browserTests": [

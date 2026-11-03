@@ -4768,5 +4768,125 @@
     "name": "Zuma Deluxe (ZumaTAS)",
     "url": null,
     "source": "https://github.com/9933fa/Zuma-Deluxe-TAS"
+  },
+  {
+    "name": "2048",
+    "url": "https://play2048.co/",
+    "source": "https://play2048.co/"
+  },
+  {
+    "name": "HexGL",
+    "url": "https://hexgl.bkcore.com/play/",
+    "source": "https://hexgl.bkcore.com/play/"
+  },
+  {
+    "name": "A Dark Room",
+    "url": "https://adarkroom.doublespeakgames.com/",
+    "source": "https://adarkroom.doublespeakgames.com/"
+  },
+  {
+    "name": "Cookie Clicker",
+    "url": "https://orteil.dashnet.org/cookieclicker/",
+    "source": "https://orteil.dashnet.org/cookieclicker/"
+  },
+  {
+    "name": "Universal Paperclips",
+    "url": "https://www.decisionproblem.com/paperclips/",
+    "source": "https://www.decisionproblem.com/paperclips/"
+  },
+  {
+    "name": "Antimatter Dimensions",
+    "url": "https://ivark.github.io/AntimatterDimensions/",
+    "source": "https://ivark.github.io/AntimatterDimensions/"
+  },
+  {
+    "name": "Sandspiel",
+    "url": "https://sandspiel.club/",
+    "source": "https://sandspiel.club/"
+  },
+  {
+    "name": "Sandboxels",
+    "url": "https://sandboxels.r74n.com/",
+    "source": "https://sandboxels.r74n.com/"
+  },
+  {
+    "name": "shapez · Demo",
+    "url": "https://shapez.io/",
+    "source": "https://shapez.io/"
+  },
+  {
+    "name": "PolyTrack",
+    "url": "https://kodub.itch.io/polytrack",
+    "source": "https://kodub.itch.io/polytrack"
+  },
+  {
+    "name": "Friday Night Funkin’",
+    "url": "https://ninja-muffin24.itch.io/funkin",
+    "source": "https://ninja-muffin24.itch.io/funkin"
+  },
+  {
+    "name": "Celeste Classic",
+    "url": "https://maddymakesgamesinc.itch.io/celesteclassic",
+    "source": "https://maddymakesgamesinc.itch.io/celesteclassic"
+  },
+  {
+    "name": "Little Alchemy 2",
+    "url": "https://littlealchemy2.com/",
+    "source": "https://littlealchemy2.com/"
+  },
+  {
+    "name": "Infinite Craft",
+    "url": "https://neal.fun/infinite-craft/",
+    "source": "https://neal.fun/infinite-craft/"
+  },
+  {
+    "name": "Slow Roads",
+    "url": "https://slowroads.io/",
+    "source": "https://slowroads.io/"
+  },
+  {
+    "name": "Skribbl.io",
+    "url": "https://skribbl.io/",
+    "source": "https://skribbl.io/"
+  },
+  {
+    "name": "Gartic Phone",
+    "url": "https://garticphone.com/",
+    "source": "https://garticphone.com/"
+  },
+  {
+    "name": "Smash Karts",
+    "url": "https://smashkarts.io/",
+    "source": "https://smashkarts.io/"
+  },
+  {
+    "name": "Shell Shockers",
+    "url": "https://shellshock.io/",
+    "source": "https://shellshock.io/"
+  },
+  {
+    "name": "Slither.io",
+    "url": "http://slither.io/?a",
+    "source": "http://slither.io/?a"
+  },
+  {
+    "name": "0h h1",
+    "url": "https://0hh1.com/",
+    "source": "https://0hh1.com/"
+  },
+  {
+    "name": "0h n0",
+    "url": "https://0hn0.com/",
+    "source": "https://0hn0.com/"
+  },
+  {
+    "name": "Ducklings.io",
+    "url": "https://ducklings.io/",
+    "source": "https://ducklings.io/"
+  },
+  {
+    "name": "Super Auto Pets",
+    "url": "https://teamwood.itch.io/super-auto-pets",
+    "source": "https://teamwood.itch.io/super-auto-pets"
   }
 ]
