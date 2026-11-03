@@ -26,3 +26,10 @@ Requer Git, Python 3, CMake, Ninja e um compilador C++20. GCC 13 com `<format>` 
 5. Examine `games/bomba-geomatrix-2026/explore.log` e os frames. Uma compilação concluída **não** confirma que o jogo funcione. Só avance ao navegador após verificar o resultado do runner.
 
 Distribuição da ferramenta e distribuição do conteúdo do jogo são coisas diferentes. Preserve a licença e os créditos upstream. Não atribua a criação original de Bomba Patch ao NovaPlay.
+
+
+## Prova de execução
+
+![Aviso de cartão de memória em português](proof/native-memory-card.png)
+
+Captura do runner nativo por software, aos 900 frames. Não é uma captura de partida nem prova da versão de navegador. O gerador foi ajustado para separar declarações por módulo e evitar reconstruções desnecessárias; as três regressões de recompilação passaram após a mudança.
