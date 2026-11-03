@@ -2401,6 +2401,175 @@
       "game": "Heroes of Might and Magic II · fheroes2 Web",
       "url": "https://buildenginegames.online/homm2webgit/index.html",
       "result": "Launcher renderizado em 03/11/2026, com Select folder, Upload ZIP e Click to Play desabilitado sem os dados. Nenhum arquivo original fornecido e nenhuma partida iniciada."
+    },
+    {
+      "game": "NBA 2K12 · candidato PS2",
+      "url": "https://nba2k12.online/",
+      "result": "Domínio estacionado GoDaddy com Adquira este domínio e links patrocinados. Nenhum launcher. Não adicionar."
+    },
+    {
+      "game": "UFC Throwdown · candidato PS2",
+      "url": "https://ufc2.online/",
+      "result": "Domínio estacionado GoDaddy com Adquira este domínio. Nenhum launcher. Não adicionar."
+    },
+    {
+      "game": "God of War: Chains of Olympus · candidato PSP",
+      "url": "https://godofwarchains.online/",
+      "result": "Domínio estacionado GoDaddy; nenhuma partida. Não adicionar."
+    },
+    {
+      "game": "God of War: Ghost of Sparta · candidato PSP",
+      "url": "https://godofwarsparta.online/",
+      "result": "Domínio estacionado GoDaddy; nenhuma partida. Não adicionar."
+    },
+    {
+      "game": "God of War II · projeto técnico PS2 Web Recomp",
+      "url": "https://github.com/snuri00/ps2-web-recomp",
+      "result": "Compilação a partir de disco próprio; nenhuma distribuição pronta ou combate validado nesta rodada. Não adicionar como abrir e jogar."
+    },
+    {
+      "game": "Call of Duty: Black Ops Zombies",
+      "url": "https://vel.gg/bsz",
+      "result": "Revisão de 03/11/2026: setup Single Player / Classic / Low e mapa Kino der Toten observados. Após carregar, o navegador de teste exibiu UNSUPPORTED GRAPHICS — WebGL2 is unavailable. Partida e controles em jogo não validados; pode funcionar em aparelhos com WebGL2 disponível."
+    },
+    {
+      "game": "Modern Warfare · Open Victor Zulu",
+      "url": "https://ovz-game-production.up.railway.app",
+      "result": "Revisão de 03/11/2026: a página informa Open Victor Zulu: Global Flashpoint is offline for now e retirada após pedido de DMCA. Não há partida disponível neste endereço; abertura para jogar desativada."
+    },
+    {
+      "game": "Call of Duty Web Collection",
+      "url": "https://cod-webports.pages.dev/",
+      "result": "Página escura sem controles ou partida observáveis. Não adicionar."
+    },
+    {
+      "game": "Assassin’s Creed: Freerunners · Ubisoft Nano",
+      "url": "https://nano.ubisoft.com/",
+      "result": "Serviço do criador retornou upstream connect error / remote connection failure. Sem gameplay; não apresentar spin-off arcade como Assassin’s Creed principal."
+    },
+    {
+      "game": "Mortal Kombat · DOSZone",
+      "url": "https://dos.zone/mortal-kombat-1993/",
+      "result": "Erro de conexão/timeout após uma recarga; sem partida."
+    },
+    {
+      "game": "Mortal Kombat II · demo DOS",
+      "url": "https://dosgames.com/game/mortal-kombat-2/",
+      "result": "DOSBox e luta Liu Kang/Reptile iniciados via F1/Enter; cronômetro, dano e rounds renderizados. Resposta direta a movimento/jump/ataque não comprovada após setas/F10. Demo limitada; critério estrito não atendido."
+    },
+    {
+      "game": "Mortal Kombat 9 · projeto de fãs",
+      "url": "https://mk9.lauta.site/",
+      "result": "Play desativado por ausência de WebGPU/aceleração gráfica no navegador remoto."
     }
-  ]
+  ],
+  "functionalityReview": {
+    "date": "2026-11-03",
+    "rule": "Novas adições desta rodada só com partida controlável observada. Não garante todos os aparelhos.",
+    "checks": [
+      {
+        "game": "NBA 2K12 · candidato PS2",
+        "url": "https://nba2k12.online/",
+        "final_url": "https://nba2k12.online/lander",
+        "result": "Domínio estacionado GoDaddy com Adquira este domínio e links patrocinados. Nenhum launcher. Não adicionar.",
+        "decision": "excluded",
+        "checked": "2026-11-03",
+        "method": "Navegador remoto Chromium; sem partidas presumidas a partir de menu ou índice externo."
+      },
+      {
+        "game": "UFC Throwdown · candidato PS2",
+        "url": "https://ufc2.online/",
+        "final_url": "https://ufc2.online/lander",
+        "result": "Domínio estacionado GoDaddy com Adquira este domínio. Nenhum launcher. Não adicionar.",
+        "decision": "excluded",
+        "checked": "2026-11-03",
+        "method": "Navegador remoto Chromium; sem partidas presumidas a partir de menu ou índice externo."
+      },
+      {
+        "game": "God of War: Chains of Olympus · candidato PSP",
+        "url": "https://godofwarchains.online/",
+        "final_url": "https://godofwarchains.online/lander",
+        "result": "Domínio estacionado GoDaddy; nenhuma partida. Não adicionar.",
+        "decision": "excluded",
+        "checked": "2026-11-03",
+        "method": "Navegador remoto Chromium; sem partidas presumidas a partir de menu ou índice externo."
+      },
+      {
+        "game": "God of War: Ghost of Sparta · candidato PSP",
+        "url": "https://godofwarsparta.online/",
+        "final_url": "https://godofwarsparta.online/lander",
+        "result": "Domínio estacionado GoDaddy; nenhuma partida. Não adicionar.",
+        "decision": "excluded",
+        "checked": "2026-11-03",
+        "method": "Navegador remoto Chromium; sem partidas presumidas a partir de menu ou índice externo."
+      },
+      {
+        "game": "God of War II · projeto técnico PS2 Web Recomp",
+        "url": "https://github.com/snuri00/ps2-web-recomp",
+        "result": "Compilação a partir de disco próprio; nenhuma distribuição pronta ou combate validado nesta rodada. Não adicionar como abrir e jogar.",
+        "decision": "research",
+        "checked": "2026-11-03",
+        "method": "Navegador remoto Chromium; sem partidas presumidas a partir de menu ou índice externo."
+      },
+      {
+        "game": "Call of Duty: Black Ops Zombies",
+        "url": "https://vel.gg/bsz",
+        "final_url": "https://vel.gg/bsz/kino?mode=single&guns=classic",
+        "result": "Revisão de 03/11/2026: setup Single Player / Classic / Low e mapa Kino der Toten observados. Após carregar, o navegador de teste exibiu UNSUPPORTED GRAPHICS — WebGL2 is unavailable. Partida e controles em jogo não validados; pode funcionar em aparelhos com WebGL2 disponível.",
+        "decision": "existing-limited",
+        "checked": "2026-11-03",
+        "method": "Navegador remoto Chromium; sem partidas presumidas a partir de menu ou índice externo."
+      },
+      {
+        "game": "Modern Warfare · Open Victor Zulu",
+        "url": "https://ovz-game-production.up.railway.app",
+        "result": "Revisão de 03/11/2026: a página informa Open Victor Zulu: Global Flashpoint is offline for now e retirada após pedido de DMCA. Não há partida disponível neste endereço; abertura para jogar desativada.",
+        "decision": "existing-unavailable",
+        "checked": "2026-11-03",
+        "method": "Navegador remoto Chromium; sem partidas presumidas a partir de menu ou índice externo."
+      },
+      {
+        "game": "Call of Duty Web Collection",
+        "url": "https://cod-webports.pages.dev/",
+        "result": "Página escura sem controles ou partida observáveis. Não adicionar.",
+        "decision": "excluded",
+        "checked": "2026-11-03",
+        "method": "Navegador remoto Chromium; sem partidas presumidas a partir de menu ou índice externo."
+      },
+      {
+        "game": "Assassin’s Creed: Freerunners · Ubisoft Nano",
+        "url": "https://nano.ubisoft.com/",
+        "result": "Serviço do criador retornou upstream connect error / remote connection failure. Sem gameplay; não apresentar spin-off arcade como Assassin’s Creed principal.",
+        "decision": "excluded",
+        "checked": "2026-11-03",
+        "method": "Navegador remoto Chromium; sem partidas presumidas a partir de menu ou índice externo."
+      },
+      {
+        "game": "Mortal Kombat · DOSZone",
+        "url": "https://dos.zone/mortal-kombat-1993/",
+        "result": "Erro de conexão/timeout após uma recarga; sem partida.",
+        "decision": "excluded",
+        "checked": "2026-11-03",
+        "method": "Navegador remoto Chromium; somente partida controlável comprova a aceitação desta rodada."
+      },
+      {
+        "game": "Mortal Kombat II · demo DOS",
+        "url": "https://dosgames.com/game/mortal-kombat-2/",
+        "result": "DOSBox e luta Liu Kang/Reptile iniciados via F1/Enter; cronômetro, dano e rounds renderizados. Resposta direta a movimento/jump/ataque não comprovada após setas/F10. Demo limitada; critério estrito não atendido.",
+        "decision": "excluded-partial-test",
+        "checked": "2026-11-03",
+        "method": "Navegador remoto Chromium; somente partida controlável comprova a aceitação desta rodada."
+      },
+      {
+        "game": "Mortal Kombat 9 · projeto de fãs",
+        "url": "https://mk9.lauta.site/",
+        "result": "Play desativado por ausência de WebGPU/aceleração gráfica no navegador remoto.",
+        "decision": "excluded-test-environment",
+        "checked": "2026-11-03",
+        "method": "Navegador remoto Chromium; somente partida controlável comprova a aceitação desta rodada."
+      }
+    ],
+    "activeAdditions": 0,
+    "catalogEntries": 108
+  }
 }
