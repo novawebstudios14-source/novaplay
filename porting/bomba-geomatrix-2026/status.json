@@ -1,0 +1,31 @@
+{
+  "edition": "Bomba Patch 2027 GeoMatrix — package Outubro 2026",
+  "date": "2026-11-03",
+  "engine": "snuri00/ps2-web-recomp",
+  "engineRevision": "e026b971324068773eed88bf502437de9e581b6b",
+  "bootExecutable": "BPGE_010.26",
+  "originalExecutableSha256": "0236a6970622d0ba7c0f180de523403cc571fbf3f402e9f0d9f8cb77e77c7abd",
+  "isoBytes": 2572746752,
+  "nativeBoot": "verified",
+  "nativeMainMenu": "verified with experimental opening skip",
+  "nativeMatch": "not yet verified",
+  "webBuild": "compiled; 28 MiB Wasm, 2.8 MiB preload data",
+  "browserTest": "blocked in HTTP preview by missing cross-origin isolation",
+  "publishedPlayable": false,
+  "openingPatch": {
+    "address": "0x00175E38",
+    "expectedInstruction": "0x0C235764",
+    "replacement": "0x00000000",
+    "status": "menu reached; match testing pending"
+  },
+  "nativeTeamSelection": "verified",
+  "nativeMatchSettings": "verified",
+  "renderer": "constant attribute interpolation fixed; residual artifacts under investigation",
+  "dynamicEntryCapture": "reached pages beyond declared windows supported",
+  "mwo3": {
+    "originalModules": 35,
+    "translatedUnits": 641,
+    "formationAndGameplayTextMatchesRam": true,
+    "nativeValidation": "pending"
+  }
+}

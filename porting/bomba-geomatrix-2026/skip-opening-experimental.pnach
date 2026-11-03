@@ -1,0 +1,4 @@
+gametitle=Bomba Patch GeoMatrix Outubro 2026 — experimental opening skip
+comment=Only for boot executable SHA256 0236a6970622d0ba7c0f180de523403cc571fbf3f402e9f0d9f8cb77e77c7abd.
+comment=Skip the call to the opening movie routine; preserve fade and main game initialization.
+patch=1,EE,00175E38,word,00000000

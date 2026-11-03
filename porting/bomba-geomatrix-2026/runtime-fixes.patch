@@ -1,0 +1,277 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 6765f07..081dc57 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -89,6 +89,10 @@ if(PS2_GENERATED)
+     target_include_directories(ps2game PRIVATE "${PS2_GENERATED}")
+     target_link_libraries(ps2game PUBLIC ps2runtime)
+     target_compile_options(ps2game PRIVATE -Wno-unused-label -Wno-unused-variable)
++    if(NOT EMSCRIPTEN)
++        # Faster exploration builds; retain Release optimization for runtime and web.
++        target_compile_options(ps2game PRIVATE -O1)
++    endif()
+ 
+     if(EMSCRIPTEN)
+         set(PS2_WEB_ELF "" CACHE FILEPATH "Game executable preloaded as /game/core.elf")
+diff --git a/host/main.cpp b/host/main.cpp
+index 2fdf426..27409b3 100644
+--- a/host/main.cpp
++++ b/host/main.cpp
+@@ -89,6 +89,14 @@ int main(int argc, char **argv) {
+ #endif
+     register_generated_code();
+     register_generated_vu();
++    if (std::getenv("PS2_PROGRESS")) {
++        auto previous = ps2::g_options.on_vblank;
++        ps2::g_options.on_vblank = [previous]() {
++            if (previous) previous();
++            if (ps2::frame_count() % 60 == 0)
++                std::fprintf(stderr, "[progress] frame %llu\n", static_cast<unsigned long long>(ps2::frame_count()));
++        };
++    }
+     const auto emulate = [&]() -> int {
+         std::uint32_t entry = 0;
+         if (!ps2::load_elf(argv[1], entry)) {
+diff --git a/recomp/codegen.cpp b/recomp/codegen.cpp
+index 47079a1..4287fea 100644
+--- a/recomp/codegen.cpp
++++ b/recomp/codegen.cpp
+@@ -80,6 +80,16 @@ public:
+     std::vector<UnitRow> run() {
+         add_required_entries();
+         assign_ids();
++        // A module changing should not invalidate every compiled unit of the game.
++        std::ostringstream declarations;
++        declarations << "#pragma once\n#include \"ps2/generated.hpp\"\nnamespace gen {\n";
++        for (std::uint32_t u = 0; u < layout_.count(); ++u) {
++            if (!has_code_[u]) continue;
++            declarations << "void " << unit_name(u) << "(ps2::Cpu &, std::uint32_t, std::uint32_t);\n";
++            declarations << "extern const std::uint16_t " << table_name(u) << "[];\n";
++        }
++        declarations << "}\n";
++        write_if_changed(fs::path(options_.output) / (prefix_ + "unit_decls.hpp"), declarations.str());
+         std::vector<UnitRow> rows;
+         for (std::uint32_t u = 0; u < layout_.count(); ++u)
+             if (has_code_[u]) {
+@@ -183,7 +193,7 @@ private:
+         }
+ 
+         out_.str({});
+-        out_ << "#include \"units.hpp\"\n\nnamespace gen {\n\nusing namespace ps2;\n\n";
++        out_ << "#include \"" << prefix_ << "unit_decls.hpp\"\n\nnamespace gen {\n\nusing namespace ps2;\n\n";
+         out_ << "const std::uint16_t " << table_name(u) << "[" << (layout_.size() / 4) << "] = {";
+         std::vector<std::uint16_t> dense(layout_.size() / 4, 0);
+         for (const auto &[a, id] : ids_[u]) dense[(a - base_) >> 2] = id;
+diff --git a/recomp/elf.cpp b/recomp/elf.cpp
+index 62fc076..863f35a 100644
+--- a/recomp/elf.cpp
++++ b/recomp/elf.cpp
+@@ -74,9 +74,18 @@ Image Image::load(const std::string &path) {
+ 
+ Image Image::raw(std::uint32_t address, std::vector<std::uint8_t> bytes, std::pair<std::uint32_t, std::uint32_t> text) {
+     Image image;
+-    const auto initialized_size = static_cast<std::uint32_t>(bytes.size());
+-    image.segments_.push_back(Segment{address, std::move(bytes), true, initialized_size});
+-    image.text_ = text;
++    if (text.first > text.second || text.second > bytes.size())
++        throw std::runtime_error("raw image text bounds exceed its bytes");
++    const auto append = [&](std::uint32_t begin, std::uint32_t end, bool executable) {
++        if (begin == end) return;
++        image.segments_.push_back(Segment{address + begin,
++            std::vector<std::uint8_t>(bytes.begin() + begin, bytes.begin() + end),
++            executable, end - begin});
++    };
++    append(0, text.first, false);
++    append(text.first, text.second, true);
++    append(text.second, static_cast<std::uint32_t>(bytes.size()), false);
++    image.text_ = {address + text.first, address + text.second};
+     return image;
+ }
+ 
+diff --git a/recomp/main.cpp b/recomp/main.cpp
+index 52faafe..088c091 100644
+--- a/recomp/main.cpp
++++ b/recomp/main.cpp
+@@ -107,11 +107,22 @@ std::vector<Snr2Module> read_overlays(const std::string &dir) {
+         Snr2Module o;
+         std::ifstream file(path.path(), std::ios::binary);
+         o.bytes = std::vector<std::uint8_t>{std::istreambuf_iterator<char>(file), {}};
+-        if (o.bytes.size() < 0x400u || o.bytes.size() & 3u) continue;
++        if (o.bytes.size() < 4u || o.bytes.size() & 3u) continue;
+         o.size = static_cast<std::uint32_t>(o.bytes.size());
+         o.base = static_cast<std::uint32_t>(std::stoul(base, nullptr, 16));
+         o.code_begin = 0;
+         o.code_end = o.size;
++        // MWo3 overlays carry explicit text/data lengths. Mutable data is not
++        // executable and must not participate in translated-code checks.
++        if (o.bytes.size() >= 0x40 && std::memcmp(o.bytes.data(), "MWo3", 4) == 0) {
++            std::uint32_t declared_base = 0, text_size = 0;
++            std::memcpy(&declared_base, o.bytes.data() + 8, 4);
++            std::memcpy(&text_size, o.bytes.data() + 12, 4);
++            if (declared_base != o.base || text_size > o.size - 0x40)
++                throw std::runtime_error("invalid MWo3 text bounds: " + stem);
++            o.code_begin = 0x40;
++            o.code_end = 0x40 + text_size;
++        }
+         o.name = stem;
+         if (std::any_of(overlays.begin(), overlays.end(), [&](const Snr2Module &m) { return m.base == o.base && m.bytes == o.bytes; })) continue;
+         overlays.push_back(std::move(o));
+@@ -227,7 +238,7 @@ int main(int argc, char **argv) {
+                 for (const std::uint32_t entry : it->second) window_tokens[o.base].insert(entry);
+         }
+         for (const Snr2Module &o : overlays) {
+-            Image candidate = Image::raw(o.base, o.bytes, {0, o.size});
++            Image candidate = Image::raw(o.base, o.bytes, {o.code_begin, o.code_end});
+             std::vector<std::uint32_t> seeds = window_seeds[o.base];
+             for (const std::uint32_t entry : window_tokens[o.base]) seeds.push_back(o.base + entry);
+             const Program signature_program = analyse(candidate, seeds, {});
+@@ -251,7 +262,7 @@ int main(int argc, char **argv) {
+         }
+         for (const Snr2Module &o : overlays) {
+             if (!representatives.count(o.name)) continue;
+-            images.push_back(Image::raw(o.base, o.bytes, {0, o.size}));
++            images.push_back(Image::raw(o.base, o.bytes, {o.code_begin, o.code_end}));
+             std::vector<std::uint32_t> seeds = window_seeds[o.base];
+             // Entry tokens name module positions, and unlike a relocatable
+             // module this image occupies a real address.
+diff --git a/runtime/include/ps2/vu_ops.hpp b/runtime/include/ps2/vu_ops.hpp
+index d98afb7..7295735 100644
+--- a/runtime/include/ps2/vu_ops.hpp
++++ b/runtime/include/ps2/vu_ops.hpp
+@@ -396,7 +396,14 @@ PS2_VU_INLINE void vstore(Reg128 &r, v4u v) { std::memcpy(&r, &v, 16); }
+ PS2_VU_INLINE v4u vsplat(std::uint32_t x) { return v4u{x, x, x, x}; }
+ PS2_VU_INLINE v4u vsel(v4u old, v4u now, v4u mask) { return (now & mask) | (old & ~mask); }
+ PS2_VU_INLINE v4u vfix(v4u x) {
++#if defined(__clang__)
+     const v4i clamped = __builtin_elementwise_min((v4i)(x & 0x7FFFFFFFu), (v4i){0x7F7FFFFF, 0x7F7FFFFF, 0x7F7FFFFF, 0x7F7FFFFF});
++#else
++    const v4i magnitude = (v4i)(x & 0x7FFFFFFFu);
++    const v4i limit = {0x7F7FFFFF, 0x7F7FFFFF, 0x7F7FFFFF, 0x7F7FFFFF};
++    const v4i below = magnitude < limit;
++    const v4i clamped = (magnitude & below) | (limit & ~below);
++#endif
+     const v4i normal = (v4f)clamped >= (v4f)(v4i){0x00800000, 0x00800000, 0x00800000, 0x00800000};
+     return (x & 0x80000000u) | (v4u)(clamped & normal);
+ }
+@@ -441,7 +448,8 @@ PS2_VU_INLINE v4u vftoi(v4u x, int fraction) {
+ PS2_VU_INLINE v4u vitof(v4u x, int fraction) {
+     const v4i v = (v4i)x;
+     v4f f = __builtin_convertvector(v, v4f);
+-    if (__builtin_reduce_or((v4i)(x + 0x01000000u > 0x02000000u))) {
++    const v4i needs_fix = (v4i)(x + 0x01000000u > 0x02000000u);
++    if (needs_fix[0] | needs_fix[1] | needs_fix[2] | needs_fix[3]) {
+         const v4i big = f >= 2147483648.0f;
+         const v4i back = __builtin_convertvector((v4f)((v4i)f & ~big), v4i);
+         const v4i over = big | ((v >= 0) & (back > v)) | ((v < 0) & (back < v));
+diff --git a/runtime/src/gs/raster.cpp b/runtime/src/gs/raster.cpp
+index 6aca80a..e0a24f4 100644
+--- a/runtime/src/gs/raster.cpp
++++ b/runtime/src/gs/raster.cpp
+@@ -360,17 +360,18 @@ Attr attr_of(const Setup &s, const Vertex &v) {
+     return a;
+ }
+ 
+-Attr lerp3(const Attr &a, const Attr &b, const Attr &c, float wa, float wb, float wc) {
++Attr lerp3(const Attr &a, const Attr &b, const Attr &c, float wa, float wb, [[maybe_unused]] float wc) {
++    // Anchor at one vertex so constant depth/alpha remain exact across a triangle.
+     Attr r;
+-    r.r = a.r * wa + b.r * wb + c.r * wc;
+-    r.g = a.g * wa + b.g * wb + c.g * wc;
+-    r.b = a.b * wa + b.b * wb + c.b * wc;
+-    r.a = a.a * wa + b.a * wb + c.a * wc;
+-    r.s = a.s * wa + b.s * wb + c.s * wc;
+-    r.t = a.t * wa + b.t * wb + c.t * wc;
+-    r.q = a.q * wa + b.q * wb + c.q * wc;
+-    r.f = a.f * wa + b.f * wb + c.f * wc;
+-    r.z = a.z * wa + b.z * wb + c.z * wc;
++    r.r = c.r + (a.r - c.r) * wa + (b.r - c.r) * wb;
++    r.g = c.g + (a.g - c.g) * wa + (b.g - c.g) * wb;
++    r.b = c.b + (a.b - c.b) * wa + (b.b - c.b) * wb;
++    r.a = c.a + (a.a - c.a) * wa + (b.a - c.a) * wb;
++    r.s = c.s + (a.s - c.s) * wa + (b.s - c.s) * wb;
++    r.t = c.t + (a.t - c.t) * wa + (b.t - c.t) * wb;
++    r.q = c.q + (a.q - c.q) * wa + (b.q - c.q) * wb;
++    r.f = c.f + (a.f - c.f) * wa + (b.f - c.f) * wb;
++    r.z = c.z + (a.z - c.z) * wa + (b.z - c.z) * wb;
+     return r;
+ }
+ 
+diff --git a/runtime/src/system.cpp b/runtime/src/system.cpp
+index 86f8ca9..905cd05 100644
+--- a/runtime/src/system.cpp
++++ b/runtime/src/system.cpp
+@@ -378,7 +378,7 @@ bool load_elf(const std::string &path, std::uint32_t &entry) {
+         const std::size_t ph = phoff + i * u16(42);
+         if (u32(ph) != 1) continue;
+         const std::uint32_t offset = u32(ph + 4), filesz = u32(ph + 16), memsz = u32(ph + 20);
+-        if (offset + filesz > data.size() || filesz > memsz) return false;
++        if (filesz > memsz || (filesz && (offset > data.size() || filesz > data.size() - offset))) return false;
+         if (const std::uint32_t at = u32(ph + 8); (at >> 14) == (kScratchpadBase >> 14)) {
+             const std::uint32_t start = at & (kScratchpadSize - 1);
+             if (start + memsz > kScratchpadSize) return false;
+@@ -387,7 +387,9 @@ bool load_elf(const std::string &path, std::uint32_t &entry) {
+             continue;
+         }
+         const std::uint32_t vaddr = physical(u32(ph + 8));
+-        if (vaddr + memsz > kRamSize) return false;
++        // Empty SCE reservation PHDRs can lie beyond physical EE RAM.
++        if (vaddr >= kRamSize && !filesz) continue;
++        if (vaddr > kRamSize || memsz > kRamSize - vaddr) return false;
+         std::memcpy(g_ram + vaddr, data.data() + offset, filesz);
+         watch_span(vaddr, filesz, "boot:load_exec");
+         std::memset(g_ram + vaddr + filesz, 0, memsz - filesz);
+diff --git a/scripts/port.sh b/scripts/port.sh
+index 6370a3a..9dc8dfc 100755
+--- a/scripts/port.sh
++++ b/scripts/port.sh
+@@ -109,7 +109,7 @@ if windows=$(python3 -I "$here/windows.py" list "$elf") && [ -n "$windows" ]; th
+   echo "code windows the game rewrites: $(echo "$windows" | tr '\n' ' ')"
+ fi
+ 
+-translate() { "$tools/eerecomp" "$elf" --entries "$game/entries.txt" "${modules[@]}" "${overlays[@]}" --out "$generated" | tail -1; }
++translate() { python3 "$here/novaplay_hints.py" "$game"; "$tools/eerecomp" "$elf" --entries "$game/entries.txt" "${modules[@]}" "${overlays[@]}" --out "$generated" | tail -1; }
+ 
+ echo "== [3/6] machine code to C++"
+ touch "$game/entries.txt"
+diff --git a/scripts/windows.py b/scripts/windows.py
+index 542fc09..ea485ba 100644
+--- a/scripts/windows.py
++++ b/scripts/windows.py
+@@ -95,5 +95,36 @@ def main() -> None:
+                 open(misses, 'w').write('\n'.join(names.get(t, t) for t in lines) + '\n')
+ 
+ 
++    # A reached overlay can extend past the declared starts/capture cap.
++    # Capture only the reached 64 KiB region, rather than translating arbitrary RAM.
++    if misses and os.path.exists(misses):
++        lines = open(misses).read().split()
++        rewritten = []
++        for token in lines:
++            if ':' in token:
++                rewritten.append(token)
++                continue
++            pc = int(token, 16)
++            if any(v[0] == 1 and v[4] and v[2] <= pc < v[2] + v[4]
++                   for v in load_phdrs(elf)):
++                rewritten.append(token)
++                continue
++            reached_size = 0x10000
++            base = pc & ~(reached_size - 1)
++            if pc & 3 or base + reached_size > min(len(dump), 0x2000000):
++                raise ValueError('Reached entry is outside aligned EE RAM')
++            blob = dump[base:base + reached_size]
++            if not any(blob[pc - base:pc - base + 64]):
++                raise ValueError('Reached entry points to an empty instruction')
++            stem = '%08X_%08X' % (base, binascii.crc32(blob) & 0xFFFFFFFF)
++            os.makedirs(outdir, exist_ok=True)
++            path = os.path.join(outdir, stem + '.bin')
++            if not os.path.exists(path):
++                open(path, 'wb').write(blob)
++                print('captured reached region %s, %d bytes' % (stem, reached_size))
++            rewritten.append('%s:%x' % (stem, pc - base))
++        open(misses, 'w').write('\n'.join(rewritten) + '\n')
++
++
+ if __name__ == '__main__':
+     main()
+\ No newline at end of file
