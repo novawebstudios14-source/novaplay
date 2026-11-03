@@ -27,6 +27,16 @@ def add_hints(game):
             if token not in known:
                 known.add(token)
                 added.append(token)
+    checkpoint = Path(__file__).with_name('observed-entries.txt')
+    if checkpoint.is_file():
+        for token in checkpoint.read_text().split():
+            stem, separator, offset = token.partition(':')
+            if not separator or '/' in stem or '\\' in stem:
+                continue
+            source = game / 'overlays' / (stem + '.bin')
+            if source.is_file() and 0 <= int(offset, 16) < source.stat().st_size and token not in known:
+                known.add(token)
+                added.append(token)
     stems = {token.split(':', 1)[0] for token in known if ':' in token}
     for stem in sorted(stems):
         if '/' in stem or '\\' in stem:

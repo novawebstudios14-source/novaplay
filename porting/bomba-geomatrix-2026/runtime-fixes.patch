@@ -13,6 +13,25 @@ index 6765f07..081dc57 100644
  
      if(EMSCRIPTEN)
          set(PS2_WEB_ELF "" CACHE FILEPATH "Game executable preloaded as /game/core.elf")
+diff --git a/host/main.cpp b/host/main.cpp
+index 2fdf426..27409b3 100644
+--- a/host/main.cpp
++++ b/host/main.cpp
+@@ -89,6 +89,14 @@ int main(int argc, char **argv) {
+ #endif
+     register_generated_code();
+     register_generated_vu();
++    if (std::getenv("PS2_PROGRESS")) {
++        auto previous = ps2::g_options.on_vblank;
++        ps2::g_options.on_vblank = [previous]() {
++            if (previous) previous();
++            if (ps2::frame_count() % 60 == 0)
++                std::fprintf(stderr, "[progress] frame %llu\n", static_cast<unsigned long long>(ps2::frame_count()));
++        };
++    }
+     const auto emulate = [&]() -> int {
+         std::uint32_t entry = 0;
+         if (!ps2::load_elf(argv[1], entry)) {
 diff --git a/recomp/codegen.cpp b/recomp/codegen.cpp
 index 47079a1..4287fea 100644
 --- a/recomp/codegen.cpp

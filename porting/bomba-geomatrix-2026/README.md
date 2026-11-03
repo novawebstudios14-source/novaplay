@@ -1,35 +1,40 @@
-# Bomba Patch — perfil experimental de port web
+# Bomba Patch — port web experimental NovaPlay
 
-Objetivo: adaptar o próprio jogo para navegador, preservando a experiência original. Este diretório contém scripts e correções da ferramenta; não contém ISO, executável comercial, código traduzido do jogo ou build jogável.
+Objetivo: adaptar o próprio Bomba Patch ao navegador, preservando a experiência do jogo.
 
-## Estado verificado
+## Estado verificado em 03/11/2026
 
-- Edição examinada: Bomba Patch GeoMatrix, outubro de 2026, PlayStation 2.
-- ISO examinada: 2.572.746.752 bytes; BOOT2 `cdrom0:\BPGE_010.26;1`, modo NTSC.
-- SHA-256 do executável de referência: `0236a6970622d0ba7c0f180de523403cc571fbf3f402e9f0d9f8cb77e77c7abd`.
+- A ISO de referência contém Bomba Patch GeoMatrix de outubro de 2026. O menu identifica a edição como **Bomba Patch 2027**.
+- Boot, telas de memória e abertura observados no runner nativo.
+- **Menu principal observado**: Duelo, Master Liga, Liga, Copa, Treino, Editar e Opções.
+- A abertura de 719 MB bloqueava a progressão no teste. Foi identificado e testado um salto da chamada da rotina de vídeo, que permitiu chegar ao menu. Esse patch preserva a ISO original e deve ser usado apenas com o executável exato abaixo.
+- A compilação web produziu HTML, JavaScript, Wasm (~28 MiB) e dados (~2,8 MiB). A prévia HTTP não permite o isolamento exigido pela memória compartilhada; o jogo não foi validado no navegador.
+- **Partida ainda não validada. Não há versão jogável publicada.**
+
+![Menu no teste nativo](proof/native-main-menu.png)
+
+Captura do runner nativo por software. Não é prova de partida nem de funcionamento no navegador.
+
+## Edição e ferramenta
+
+- ISO: 2.572.746.752 bytes; BOOT2 `cdrom0:\BPGE_010.26;1`, NTSC.
+- Executável original SHA-256: `0236a6970622d0ba7c0f180de523403cc571fbf3f402e9f0d9f8cb77e77c7abd`.
 - CRC informado pelo portador: `3EAACE68`.
-- Ferramenta: https://github.com/snuri00/ps2-web-recomp, revisão `e026b971324068773eed88bf502437de9e581b6b`.
-- Compiladores de EE e VU construídos. Três regressões upstream passaram. Comparações vetoriais: 400.000 casos passaram. Carregador ELF: BSS com offset além do EOF e reserva vazia fora da RAM testados; dados inválidos rejeitados.
-- O teste nativo chegou à tela em português de cartão de memória, aos 900 frames. Até a quinta rodada foram observados trechos de código dinâmico ausentes; a última parada registrada foi `0x008D5C70`, aos 934 frames.
-- **Menu principal, partida e build web ainda não validados. Não existe publicação jogável concluída.**
+- Ferramenta: https://github.com/snuri00/ps2-web-recomp, revisão `e026b971324068773eed88bf502437de9e581b6b` (MIT; preserve seus créditos).
+- Patch experimental: uma instrução de chamada da abertura em `0x00175E38`, substituída por NOP. A instrução esperada na edição original é `0x0C235764`.
 
-O ambiente temporário reiniciou durante a continuação. Estes arquivos preservam as correções e o procedimento para reconstrução. Não alteram o catálogo público.
+## Correções e validação
+
+`runtime-fixes.patch` contém compatibilidade de operações vetoriais com GCC, tratamento de segmentos ELF BSS sem conteúdo, declarações separadas por módulo para reduzir recompilações e progresso opcional do runner por `PS2_PROGRESS=1`.
+
+As três regressões upstream passaram após a mudança do gerador. A normalização vetorial foi comparada em 400.000 casos. O carregador foi testado com reserva vazia fora da RAM, BSS cujo offset ultrapassa EOF e rejeição de dados inválidos. Os testes estão neste diretório.
+
+`entry-hints.py` adiciona candidatos de entrada somente a imagens de overlays alcançadas. `observed-entries.txt` preserva endereços já observados; não contém código do jogo. Copie ambos para `scripts/` do motor, usando o nome `novaplay_hints.py` para o Python.
 
 ## Construção local
 
-Requer Git, Python 3, CMake, Ninja e um compilador C++20. GCC 13 com `<format>` pode construir as ferramentas; para o runner, prefira Clang por causa de `musttail`. O Clang incluído no Emscripten também foi usado nos testes.
+Use Git, Python 3, CMake, Ninja, Clang com C++20 e Emscripten 6.0.11 para a versão web. O Clang incluído no SDK também foi usado no runner nativo. Prepare a revisão exata do motor e aplique `runtime-fixes.patch`.
 
-1. Prepare a revisão upstream acima e aplique `runtime-fixes.patch`.
-2. Copie `entry-hints.py` para `scripts/novaplay_hints.py` da ferramenta.
-3. Use a ISO de uma cópia própria com o executável esperado.
-4. Rode `build-local.sh /caminho/ps2-web-recomp /caminho/jogo.iso`.
-5. Examine `games/bomba-geomatrix-2026/explore.log` e os frames. Uma compilação concluída **não** confirma que o jogo funcione. Só avance ao navegador após verificar o resultado do runner.
+Execute `build-local.sh /caminho/ps2-web-recomp /caminho/copia-propria.iso --skip-opening` para repetir o teste com a abertura pulada. Sem a opção, a abertura original é mantida. Sempre confira os logs e os frames: alcançar o limite de quadros não certifica gameplay.
 
-Distribuição da ferramenta e distribuição do conteúdo do jogo são coisas diferentes. Preserve a licença e os créditos upstream. Não atribua a criação original de Bomba Patch ao NovaPlay.
-
-
-## Prova de execução
-
-![Aviso de cartão de memória em português](proof/native-memory-card.png)
-
-Captura do runner nativo por software, aos 900 frames. Não é uma captura de partida nem prova da versão de navegador. O gerador foi ajustado para separar declarações por módulo e evitar reconstruções desnecessárias; as três regressões de recompilação passaram após a mudança.
+O diretório não inclui ISO, executável comercial, código traduzido do jogo ou build jogável. O Bomba Patch e o jogo-base mantêm seus autores e créditos; NovaPlay identifica este trabalho de adaptação.
