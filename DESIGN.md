@@ -31,3 +31,6 @@ Immersive dark arcade direction: a larger fixed-height hero, blue-to-purple prim
 
 ## Catalog expansion
 100 entries: 24 additional creator-hosted browser games, demos and original web releases. Added Puzzle and Ritmo categories plus a Navegador platform group. New entries record HTTP success only, without claiming tested gameplay.
+
+## Classic-first curation
+Prioritize era-defining games and documented acclaim over catalog size. Mario Kart 64 and Ocarina of Time lead the editorial list and appear in the N64 filter. Awards must be sourced and tied to the original edition, never transferred to a fan build. Fidelity, own-file requirements and observed gameplay limitations must be explicit. Do not add unverified candidates merely to increase the total.

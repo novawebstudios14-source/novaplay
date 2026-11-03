@@ -1,10 +1,10 @@
 {
   "date": "2026-11-03",
-  "indexEntries": 978,
-  "indexLaunchLinks": 551,
-  "checkedDestinations": 158,
-  "httpSuccess": 149,
-  "catalogEntries": 100,
+  "indexEntries": 980,
+  "indexLaunchLinks": 553,
+  "checkedDestinations": 160,
+  "httpSuccess": 151,
+  "catalogEntries": 102,
   "method": "Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo. Ampliação: 24 páginas de jogos e criadores responderam HTTP 200 em 03/11/2026; as partidas dessas novas entradas não foram testadas.",
   "sources": [
     "https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports",
@@ -35,7 +35,9 @@
     "https://0hh1.com/",
     "https://0hn0.com/",
     "https://ducklings.io/",
-    "https://teamwood.itch.io/super-auto-pets"
+    "https://teamwood.itch.io/super-auto-pets",
+    "https://github.com/AgentiLoop/MarioKart64JS",
+    "https://github.com/andrewnakas/oot-cleanroom"
   ],
   "destinations": [
     {
@@ -2268,6 +2270,20 @@
       "http": 200,
       "checked": "2026-11-03",
       "verification": "HTTP 200 em 03/11/2026; partida não testada."
+    },
+    {
+      "name": "Mario Kart 64 · MarioKart64JS",
+      "url": "https://mk64js.gokart.games/play",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "Página HTTP 200 e canvas observados em 03/11/2026. Tela preta neste navegador remoto; corrida não validada."
+    },
+    {
+      "name": "Zelda: Ocarina of Time · Clean Room",
+      "url": "https://andrewnakas.github.io/oot-cleanroom/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "HTTP 200 e carregador observados em 03/11/2026. Após carregar, canvas escuro; partida não validada."
     }
   ],
   "browserTests": [

@@ -949,5 +949,19 @@
     "source": "https://teamwood.itch.io/super-auto-pets",
     "imageSource": "https://img.itch.zone/aW1nLzExNTA5ODQ1LnBuZw==/original/m8cbDR.png",
     "screens": []
+  },
+  "classic-mario-kart-64": {
+    "name": "Mario Kart 64 · MarioKart64JS",
+    "image": "assets/classic-mario-kart-64.webp",
+    "source": "https://mk64js.gokart.games/play",
+    "imageSource": "https://mk64js.gokart.games/img/title.jpg",
+    "screens": []
+  },
+  "classic-ocarina-of-time": {
+    "name": "Zelda: Ocarina of Time · Clean Room",
+    "image": "assets/classic-ocarina-of-time.webp",
+    "source": "https://www.interactive.org/awards/award_category_details.asp?idAward=1999&idGameAwardType=65",
+    "imageSource": "https://www.interactive.org/images/games/1999_the_legend_of_zelda_ocarina_of_time_sm.jpg",
+    "screens": []
   }
 }
