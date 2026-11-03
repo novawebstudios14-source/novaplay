@@ -21,5 +21,11 @@
   "nativeTeamSelection": "verified",
   "nativeMatchSettings": "verified",
   "renderer": "constant attribute interpolation fixed; residual artifacts under investigation",
-  "dynamicEntryCapture": "reached pages beyond declared windows supported"
+  "dynamicEntryCapture": "reached pages beyond declared windows supported",
+  "mwo3": {
+    "originalModules": 35,
+    "translatedUnits": 641,
+    "formationAndGameplayTextMatchesRam": true,
+    "nativeValidation": "pending"
+  }
 }

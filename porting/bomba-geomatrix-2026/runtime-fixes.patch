@@ -62,6 +62,78 @@ index 47079a1..4287fea 100644
          out_ << "const std::uint16_t " << table_name(u) << "[" << (layout_.size() / 4) << "] = {";
          std::vector<std::uint16_t> dense(layout_.size() / 4, 0);
          for (const auto &[a, id] : ids_[u]) dense[(a - base_) >> 2] = id;
+diff --git a/recomp/elf.cpp b/recomp/elf.cpp
+index 62fc076..863f35a 100644
+--- a/recomp/elf.cpp
++++ b/recomp/elf.cpp
+@@ -74,9 +74,18 @@ Image Image::load(const std::string &path) {
+ 
+ Image Image::raw(std::uint32_t address, std::vector<std::uint8_t> bytes, std::pair<std::uint32_t, std::uint32_t> text) {
+     Image image;
+-    const auto initialized_size = static_cast<std::uint32_t>(bytes.size());
+-    image.segments_.push_back(Segment{address, std::move(bytes), true, initialized_size});
+-    image.text_ = text;
++    if (text.first > text.second || text.second > bytes.size())
++        throw std::runtime_error("raw image text bounds exceed its bytes");
++    const auto append = [&](std::uint32_t begin, std::uint32_t end, bool executable) {
++        if (begin == end) return;
++        image.segments_.push_back(Segment{address + begin,
++            std::vector<std::uint8_t>(bytes.begin() + begin, bytes.begin() + end),
++            executable, end - begin});
++    };
++    append(0, text.first, false);
++    append(text.first, text.second, true);
++    append(text.second, static_cast<std::uint32_t>(bytes.size()), false);
++    image.text_ = {address + text.first, address + text.second};
+     return image;
+ }
+ 
+diff --git a/recomp/main.cpp b/recomp/main.cpp
+index 52faafe..088c091 100644
+--- a/recomp/main.cpp
++++ b/recomp/main.cpp
+@@ -107,11 +107,22 @@ std::vector<Snr2Module> read_overlays(const std::string &dir) {
+         Snr2Module o;
+         std::ifstream file(path.path(), std::ios::binary);
+         o.bytes = std::vector<std::uint8_t>{std::istreambuf_iterator<char>(file), {}};
+-        if (o.bytes.size() < 0x400u || o.bytes.size() & 3u) continue;
++        if (o.bytes.size() < 4u || o.bytes.size() & 3u) continue;
+         o.size = static_cast<std::uint32_t>(o.bytes.size());
+         o.base = static_cast<std::uint32_t>(std::stoul(base, nullptr, 16));
+         o.code_begin = 0;
+         o.code_end = o.size;
++        // MWo3 overlays carry explicit text/data lengths. Mutable data is not
++        // executable and must not participate in translated-code checks.
++        if (o.bytes.size() >= 0x40 && std::memcmp(o.bytes.data(), "MWo3", 4) == 0) {
++            std::uint32_t declared_base = 0, text_size = 0;
++            std::memcpy(&declared_base, o.bytes.data() + 8, 4);
++            std::memcpy(&text_size, o.bytes.data() + 12, 4);
++            if (declared_base != o.base || text_size > o.size - 0x40)
++                throw std::runtime_error("invalid MWo3 text bounds: " + stem);
++            o.code_begin = 0x40;
++            o.code_end = 0x40 + text_size;
++        }
+         o.name = stem;
+         if (std::any_of(overlays.begin(), overlays.end(), [&](const Snr2Module &m) { return m.base == o.base && m.bytes == o.bytes; })) continue;
+         overlays.push_back(std::move(o));
+@@ -227,7 +238,7 @@ int main(int argc, char **argv) {
+                 for (const std::uint32_t entry : it->second) window_tokens[o.base].insert(entry);
+         }
+         for (const Snr2Module &o : overlays) {
+-            Image candidate = Image::raw(o.base, o.bytes, {0, o.size});
++            Image candidate = Image::raw(o.base, o.bytes, {o.code_begin, o.code_end});
+             std::vector<std::uint32_t> seeds = window_seeds[o.base];
+             for (const std::uint32_t entry : window_tokens[o.base]) seeds.push_back(o.base + entry);
+             const Program signature_program = analyse(candidate, seeds, {});
+@@ -251,7 +262,7 @@ int main(int argc, char **argv) {
+         }
+         for (const Snr2Module &o : overlays) {
+             if (!representatives.count(o.name)) continue;
+-            images.push_back(Image::raw(o.base, o.bytes, {0, o.size}));
++            images.push_back(Image::raw(o.base, o.bytes, {o.code_begin, o.code_end}));
+             std::vector<std::uint32_t> seeds = window_seeds[o.base];
+             // Entry tokens name module positions, and unlike a relocatable
+             // module this image occupies a real address.
 diff --git a/runtime/include/ps2/vu_ops.hpp b/runtime/include/ps2/vu_ops.hpp
 index d98afb7..7295735 100644
 --- a/runtime/include/ps2/vu_ops.hpp

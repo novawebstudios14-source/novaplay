@@ -32,7 +32,7 @@ Captura do runner nativo por software. Não é prova de partida nem de funcionam
 
 As três regressões upstream passaram após a mudança do gerador. A normalização vetorial foi comparada em 400.000 casos. O carregador foi testado com reserva vazia fora da RAM, BSS cujo offset ultrapassa EOF e rejeição de dados inválidos. O teste de interpolação reproduziu deriva em 36.262 amostras antes da correção e passou depois. A captura de entradas além das janelas declaradas também tem regressão aprovada. Os testes estão neste diretório.
 
-`entry-hints.py` adiciona candidatos de entrada somente a imagens de overlays alcançadas. `observed-entries.txt` preserva endereços já observados; não contém código do jogo. Copie ambos para `scripts/` do motor, usando o nome `novaplay_hints.py` para o Python.
+`entry-hints.py` adiciona candidatos de entrada somente a imagens de overlays alcançadas. `observed-entries.txt` preserva entradas alcançadas e candidatos de análise anteriores; nem todos foram executados. Não contém código do jogo. Copie ambos para `scripts/` do motor, usando o nome `novaplay_hints.py` para o Python.
 
 A formação executou, mas apresentou faixas gráficas; a correção numérica removeu as faixas na comparação do mesmo estado. Ainda há artefatos, e a partida não foi validada.
 
@@ -47,3 +47,13 @@ O diretório não inclui ISO, executável comercial, código traduzido do jogo o
 ## Captura ampliada durante a partida
 
 O teste de carregamento alcançou código além do limite original de 256 KiB. Para repetir a análise do mesmo estado de RAM, use `python3 capture-region.py /caminho/ram.bin /caminho/games/bomba-geomatrix-2026 940000 c78000 972330`, seguido de `entry-hints.py` e da tradução. Esses limites foram observados nesta edição; não são um mapa universal de outros jogos. O arquivo capturado contém bytes comerciais e permanece local. A ferramenta preserva a origem e não certifica o funcionamento da partida.
+
+## Módulos originais MWo3 (fluxo atual)
+
+A análise identificou cabeçalhos MWo3 em OVER.AFS. Base no offset 8, tamanho de texto no offset 12, texto a partir de 0x40. Os módulos de formação e gameplay coincidiram byte por byte com a RAM. Isso permite excluir dados mutáveis da análise e dos checks, corrigindo invalidações falsas das capturas anteriores.
+
+`extract-mwo3.py <ISO verificada> <diretório mwo3> <mwo3-entries.txt>` extrai 35 módulos válidos em RAM e adiciona candidatos somente dentro do texto. O módulo de reserva fora da RAM é ignorado. Mantenha os binários extraídos locais.
+
+A tradução atual usa `eerecomp <ELF patched> --entries <mwo3-entries.txt> --overlays <diretório mwo3> --out generated/bomba-mwo3`, seguida de CMake com `PS2_GENERATED` apontando para esse diretório. A análise produziu 641 unidades, comparadas a mais de 1.200 na exploração anterior.
+
+`raw-image-bounds-test.cpp` verifica limites absolutos e leitura de dados sem marcá-los executáveis. `mwo3-bounds-test.py <eerecomp>` verifica a exclusão de dados mutáveis e a aceitação de módulos pequenos. Ambos passaram. A nova compilação ainda precisa ser validada no runner e no navegador.
