@@ -1,6 +1,6 @@
 # NOVA PLAY
 
-Portal de jogos de navegador com 104 títulos, capas locais, busca, filtros, favoritos e carrossel.
+Portal de jogos de navegador com 108 títulos, capas locais, busca, filtros, favoritos e carrossel.
 
 Site: https://novaplay-arcade.talita-marques-924.chatgpt.site/
 

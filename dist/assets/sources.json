@@ -977,5 +977,37 @@
     "source": "https://dune2js.com/",
     "imageSource": "https://dune2js.com/img/touch-icon-180.png",
     "screens": []
+  },
+  "classic-jazz-jackrabbit": {
+    "name": "Jazz Jackrabbit · OpenJazz Shareware",
+    "image": "assets/classic-jazz-jackrabbit.webp",
+    "source": "https://github.com/openjazz/openjazz.github.io",
+    "imageSource": "https://github.com/AlisterT/openjazz/blob/master/res/switch/OpenJazz.jpg",
+    "kind": "project",
+    "screens": []
+  },
+  "classic-flashback-demo": {
+    "name": "Flashback · Demo DOS Web",
+    "image": "assets/classic-flashback-demo.webp",
+    "source": "https://github.com/warpdesign/flashback-web",
+    "imageSource": "https://github.com/warpdesign/flashback-web/blob/main/flashback.png",
+    "kind": "project",
+    "screens": []
+  },
+  "classic-another-world-demo": {
+    "name": "Another World · Demo DOS HTML5",
+    "image": "assets/classic-another-world-demo.webp",
+    "source": "https://github.com/cyxx/another_js",
+    "imageSource": "https://github.com/cyxx/another_js/blob/master/screenshot-water-640.png",
+    "kind": "project",
+    "screens": []
+  },
+  "classic-heroes-ii": {
+    "name": "Heroes of Might and Magic II · fheroes2 Web",
+    "image": "assets/classic-heroes-ii.webp",
+    "source": "https://github.com/Carter54git/fheroes-1.1.17-ported-to-web",
+    "imageSource": "https://github.com/Carter54git/fheroes-1.1.17-ported-to-web/blob/main/docs/screenshot.png",
+    "kind": "project",
+    "screens": []
   }
 }

@@ -2,10 +2,10 @@
   "date": "2026-11-03",
   "indexEntries": 984,
   "indexLaunchLinks": 557,
-  "checkedDestinations": 164,
-  "httpSuccess": 155,
-  "catalogEntries": 104,
-  "method": "Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo. Ampliação: 24 páginas de jogos e criadores responderam HTTP 200 em 03/11/2026; as partidas dessas novas entradas não foram testadas.",
+  "checkedDestinations": 168,
+  "httpSuccess": 159,
+  "catalogEntries": 108,
+  "method": "Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo. Ampliação: 24 páginas de jogos e criadores responderam HTTP 200 em 03/11/2026; as partidas dessas novas entradas não foram testadas. Rodada de clássicos: quatro distribuições web observadas no navegador em 03/11/2026, com menu, introdução, cenário ou seletor de arquivos discriminados; nenhuma campanha ou partida completa foi validada.",
   "sources": [
     "https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports",
     "https://github.com/HarshitWaldia/Browser-Games-Directory",
@@ -41,7 +41,15 @@
     "https://projects.sappharad.com/s3air_ios/",
     "https://dune2js.com/",
     "https://doodles.google/doodle/30th-anniversary-of-pac-man/?hl=pt-BR",
-    "https://play.tetris.com/games/"
+    "https://play.tetris.com/games/",
+    "https://openjazz.github.io/",
+    "https://github.com/openjazz/openjazz.github.io",
+    "https://warpdesign.github.io/flashback-web/",
+    "https://github.com/warpdesign/flashback-web",
+    "https://cyxx.github.io/another_js/",
+    "https://github.com/cyxx/another_js",
+    "https://buildenginegames.online/homm2webgit/index.html",
+    "https://github.com/Carter54git/fheroes-1.1.17-ported-to-web"
   ],
   "destinations": [
     {
@@ -2316,6 +2324,46 @@
       "http": 200,
       "checked": "2026-11-03",
       "verification": "Página oficial e player observados em 03/11/2026. O player informou ausência de suporte a WebGL neste navegador remoto; partida não validada."
+    },
+    {
+      "name": "Jazz Jackrabbit · OpenJazz Shareware",
+      "url": "https://openjazz.github.io/",
+      "source": "https://github.com/openjazz/openjazz.github.io",
+      "http": 200,
+      "final_url": "https://openjazz.github.io/",
+      "verification": "A distribuição indicada pelo OpenJazz carregou a apresentação, o menu THIS IS SHAREWARE e a tela de instruções em 03/11/2026. Movimento em fase e progressão não validados.",
+      "checked": "2026-11-03",
+      "testLevel": "launcher"
+    },
+    {
+      "name": "Flashback · Demo DOS Web",
+      "url": "https://warpdesign.github.io/flashback-web/",
+      "source": "https://github.com/warpdesign/flashback-web",
+      "http": 200,
+      "final_url": "https://warpdesign.github.io/flashback-web/",
+      "verification": "Botão Play acionado, controles publicados e introdução animada Delphine Software / US Gold observados em 03/11/2026. Comando Tab enviado; controle de Conrad e progressão em fase não validados.",
+      "checked": "2026-11-03",
+      "testLevel": "limited"
+    },
+    {
+      "name": "Another World · Demo DOS HTML5",
+      "url": "https://cyxx.github.io/another_js/",
+      "source": "https://github.com/cyxx/another_js",
+      "http": 200,
+      "final_url": "https://cyxx.github.io/another_js/",
+      "verification": "Tela de apresentação e seletor de capítulos observados em 03/11/2026. Selecionada a parte Water; cenário renderizado e comando de seta enviado. Resposta do personagem, sobrevivência e progressão não validadas.",
+      "checked": "2026-11-03",
+      "testLevel": "limited"
+    },
+    {
+      "name": "Heroes of Might and Magic II · fheroes2 Web",
+      "url": "https://buildenginegames.online/homm2webgit/index.html",
+      "source": "https://github.com/Carter54git/fheroes-1.1.17-ported-to-web",
+      "http": 200,
+      "final_url": "https://buildenginegames.online/homm2webgit/index.html",
+      "verification": "Launcher renderizado em 03/11/2026, com Select folder, Upload ZIP e Click to Play desabilitado sem os dados. Nenhum arquivo original fornecido e nenhuma partida iniciada.",
+      "checked": "2026-11-03",
+      "testLevel": "launcher"
     }
   ],
   "browserTests": [
@@ -2333,6 +2381,26 @@
       "game": "PES 6",
       "url": "https://pes6.optijuegos.net/",
       "result": "Seletor de início carregado; início sem narração falhou por adaptador WebGPU indisponível no navegador remoto."
+    },
+    {
+      "game": "Jazz Jackrabbit · OpenJazz Shareware",
+      "url": "https://openjazz.github.io/",
+      "result": "A distribuição indicada pelo OpenJazz carregou a apresentação, o menu THIS IS SHAREWARE e a tela de instruções em 03/11/2026. Movimento em fase e progressão não validados."
+    },
+    {
+      "game": "Flashback · Demo DOS Web",
+      "url": "https://warpdesign.github.io/flashback-web/",
+      "result": "Botão Play acionado, controles publicados e introdução animada Delphine Software / US Gold observados em 03/11/2026. Comando Tab enviado; controle de Conrad e progressão em fase não validados."
+    },
+    {
+      "game": "Another World · Demo DOS HTML5",
+      "url": "https://cyxx.github.io/another_js/",
+      "result": "Tela de apresentação e seletor de capítulos observados em 03/11/2026. Selecionada a parte Water; cenário renderizado e comando de seta enviado. Resposta do personagem, sobrevivência e progressão não validadas."
+    },
+    {
+      "game": "Heroes of Might and Magic II · fheroes2 Web",
+      "url": "https://buildenginegames.online/homm2webgit/index.html",
+      "result": "Launcher renderizado em 03/11/2026, com Select folder, Upload ZIP e Click to Play desabilitado sem os dados. Nenhum arquivo original fornecido e nenhuma partida iniciada."
     }
   ]
 }

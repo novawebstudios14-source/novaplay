@@ -1,5 +1,183 @@
 const games = [
   {
+    "id": "classic-jazz-jackrabbit",
+    "name": "Jazz Jackrabbit · OpenJazz Shareware",
+    "title": "Jazz Jackrabbit",
+    "slug": "jazz-jackrabbit-openjazz",
+    "cat": "Plataforma",
+    "url": "https://openjazz.github.io/",
+    "source": "https://github.com/openjazz/openjazz.github.io",
+    "kind": "Shareware · motor OpenJazz",
+    "access": "demo",
+    "testLevel": "launcher",
+    "status": "Menu shareware observado",
+    "summary": "Reencontre Jazz e os cenários de plataforma do clássico de 1994 na edição shareware.",
+    "verification": "A distribuição indicada pelo OpenJazz carregou a apresentação, o menu THIS IS SHAREWARE e a tela de instruções em 03/11/2026. Movimento em fase e progressão não validados.",
+    "notes": "Motor livre OpenJazz, distinto do executável DOS original. Esta distribuição pública fornece dados shareware, incluindo Jazz Jackrabbit Shareware 1.1 e episódios Holiday Hare segundo seu README. Não equivale à edição comercial completa. O projeto principal admite arquivos originais em outras distribuições; este link foi observado abrindo sem solicitar arquivos do visitante. Menu e instruções observados, sem validar uma fase. Compatibilidade, som e controles adicionais não foram testados.",
+    "requirements": "Esta distribuição inclui dados shareware e abriu sem pedir arquivos próprios. Para a edição completa, consulte os requisitos do motor e use sua cópia; não é o conteúdo deste link.",
+    "graphics": "WebAssembly · Emscripten",
+    "artFit": "contain",
+    "artImageSource": "https://github.com/AlisterT/openjazz/blob/master/res/switch/OpenJazz.jpg",
+    "color": "#293b8f",
+    "symbol": "✦",
+    "sub": "PLATAFORMA",
+    "checked": "2026-11-03",
+    "http": 200,
+    "devices": [
+      "PC"
+    ],
+    "device": "Computador · consulte requisitos do projeto",
+    "inputs": [
+      "Teclado"
+    ],
+    "multiplayer": null,
+    "screenshots": [],
+    "art": "assets/classic-jazz-jackrabbit.webp",
+    "artKind": "project",
+    "artSource": "https://github.com/openjazz/openjazz.github.io",
+    "artDescription": "Imagem publicada pelo projeto, usada para identificação. Não comprova recursos ou funcionamento em todos os aparelhos.",
+    "desc": "Motor livre OpenJazz, distinto do executável DOS original. Esta distribuição pública fornece dados shareware, incluindo Jazz Jackrabbit Shareware 1.1 e episódios Holiday Hare segundo seu README. Não equivale à edição comercial completa. O projeto principal admite arquivos originais em outras distribuições; este link foi observado abrindo sem solicitar arquivos do visitante. Menu e instruções observados, sem validar uma fase. Compatibilidade, som e controles adicionais não foram testados.",
+    "searchText": "Jazz Jackrabbit · OpenJazz Shareware Jazz Jackrabbit Reencontre Jazz e os cenários de plataforma do clássico de 1994 na edição shareware.",
+    "discoverySource": "https://github.com/openjazz/openjazz.github.io"
+  },
+  {
+    "id": "classic-flashback-demo",
+    "name": "Flashback · Demo DOS Web",
+    "title": "Flashback",
+    "slug": "flashback-demo-web",
+    "cat": "Aventura",
+    "url": "https://warpdesign.github.io/flashback-web/",
+    "source": "https://github.com/warpdesign/flashback-web",
+    "kind": "Demo DOS · reimplementação TypeScript",
+    "access": "demo",
+    "testLevel": "limited",
+    "status": "Introdução observada · teste limitado",
+    "summary": "A aventura cinematográfica de Conrad na demonstração DOS de Flashback, adaptada para navegador.",
+    "verification": "Botão Play acionado, controles publicados e introdução animada Delphine Software / US Gold observados em 03/11/2026. Comando Tab enviado; controle de Conrad e progressão em fase não validados.",
+    "notes": "Reescrita TypeScript baseada no motor REminiscence. O autor informa suporte apenas à demo DOS de 1992, não ao jogo completo. Há opcodes ausentes e possíveis falhas gráficas. Não oferece suporte a saves, joystick, toque ou importação dos arquivos da edição completa; a trilha de módulos/OGG também não está implementada. Som parcial é informado pelo autor e não foi avaliado nesta sessão. A introdução renderizou no navegador, sem validar jogabilidade completa.",
+    "requirements": "Navegador moderno e teclado. A demo é carregada pelo projeto; não pede os arquivos do jogo completo.",
+    "graphics": "Canvas · WebAudio · TypeScript",
+    "artFit": "cover",
+    "artImageSource": "https://github.com/warpdesign/flashback-web/blob/main/flashback.png",
+    "color": "#293b8f",
+    "symbol": "✦",
+    "sub": "AVENTURA",
+    "checked": "2026-11-03",
+    "http": 200,
+    "devices": [
+      "PC"
+    ],
+    "device": "Computador · consulte requisitos do projeto",
+    "inputs": [
+      "Teclado"
+    ],
+    "multiplayer": null,
+    "screenshots": [],
+    "art": "assets/classic-flashback-demo.webp",
+    "artKind": "project",
+    "artSource": "https://github.com/warpdesign/flashback-web",
+    "artDescription": "Imagem publicada pelo projeto, usada para identificação. Não comprova recursos ou funcionamento em todos os aparelhos.",
+    "desc": "Reescrita TypeScript baseada no motor REminiscence. O autor informa suporte apenas à demo DOS de 1992, não ao jogo completo. Há opcodes ausentes e possíveis falhas gráficas. Não oferece suporte a saves, joystick, toque ou importação dos arquivos da edição completa; a trilha de módulos/OGG também não está implementada. Som parcial é informado pelo autor e não foi avaliado nesta sessão. A introdução renderizou no navegador, sem validar jogabilidade completa.",
+    "searchText": "Flashback · Demo DOS Web Flashback A aventura cinematográfica de Conrad na demonstração DOS de Flashback, adaptada para navegador.",
+    "discoverySource": "https://github.com/warpdesign/flashback-web"
+  },
+  {
+    "id": "classic-another-world-demo",
+    "name": "Another World · Demo DOS HTML5",
+    "title": "Another World / Out of This World",
+    "slug": "another-world-demo-html5",
+    "cat": "Aventura",
+    "url": "https://cyxx.github.io/another_js/",
+    "source": "https://github.com/cyxx/another_js",
+    "kind": "Demo DOS · port JavaScript",
+    "access": "demo",
+    "testLevel": "limited",
+    "status": "Cenário observado · teste limitado",
+    "summary": "Conheça o mundo alienígena de Another World na demonstração DOS em HTML5.",
+    "verification": "Tela de apresentação e seletor de capítulos observados em 03/11/2026. Selecionada a parte Water; cenário renderizado e comando de seta enviado. Resposta do personagem, sobrevivência e progressão não validadas.",
+    "notes": "Port JavaScript que usa os dados da demo DOS. A página oferece Introduction e Water, paletas Amiga/EGA e opção de resolução 320×200. O README informa ausência de música e efeitos sonoros e limitações de transparência para dados da edição de aniversário. Não confundir a demo hospedada com o jogo completo ou uma edição remasterizada. O código foi arquivado pelo autor; o endereço público continuou acessível nesta verificação.",
+    "requirements": "Teclado: setas e Espaço/Enter conforme a página. A demo hospedada abriu sem pedir arquivos próprios; a adaptação de dados completos é um processo técnico separado descrito no repositório.",
+    "graphics": "JavaScript · Canvas",
+    "artFit": "cover",
+    "artImageSource": "https://github.com/cyxx/another_js/blob/master/screenshot-water-640.png",
+    "color": "#293b8f",
+    "symbol": "✦",
+    "sub": "AVENTURA",
+    "checked": "2026-11-03",
+    "http": 200,
+    "devices": [
+      "PC"
+    ],
+    "device": "Computador · consulte requisitos do projeto",
+    "inputs": [
+      "Teclado"
+    ],
+    "multiplayer": null,
+    "screenshots": [],
+    "art": "assets/classic-another-world-demo.webp",
+    "artKind": "project",
+    "artSource": "https://github.com/cyxx/another_js",
+    "artDescription": "Imagem publicada pelo projeto, usada para identificação. Não comprova recursos ou funcionamento em todos os aparelhos.",
+    "desc": "Port JavaScript que usa os dados da demo DOS. A página oferece Introduction e Water, paletas Amiga/EGA e opção de resolução 320×200. O README informa ausência de música e efeitos sonoros e limitações de transparência para dados da edição de aniversário. Não confundir a demo hospedada com o jogo completo ou uma edição remasterizada. O código foi arquivado pelo autor; o endereço público continuou acessível nesta verificação.",
+    "searchText": "Another World · Demo DOS HTML5 Another World / Out of This World Conheça o mundo alienígena de Another World na demonstração DOS em HTML5.",
+    "discoverySource": "https://github.com/cyxx/another_js"
+  },
+  {
+    "id": "classic-heroes-ii",
+    "name": "Heroes of Might and Magic II · fheroes2 Web",
+    "title": "Heroes of Might and Magic II",
+    "slug": "heroes-of-might-and-magic-ii-web",
+    "cat": "Estratégia",
+    "url": "https://buildenginegames.online/homm2webgit/index.html",
+    "source": "https://github.com/Carter54git/fheroes-1.1.17-ported-to-web",
+    "kind": "Port comunitário · fheroes2 1.1.17",
+    "access": "own",
+    "testLevel": "launcher",
+    "status": "Seletor de arquivos observado",
+    "summary": "Estratégia por turnos, heróis e castelos no motor fheroes2 adaptado para navegador.",
+    "verification": "Launcher renderizado em 03/11/2026, com Select folder, Upload ZIP e Click to Play desabilitado sem os dados. Nenhum arquivo original fornecido e nenhuma partida iniciada.",
+    "notes": "Port não oficial do motor fheroes2 1.1.17, via WebAssembly/SDL2. O autor pede dados de uma cópia própria de Heroes II, com DATA/HEROES2.AGG e mapas em MAPS/. O arquivo HEROES2X.AGG habilita conteúdo de Price of Loyalty; música e vídeos dependem dos arquivos e da organização descritos no projeto. Não fornece os dados comerciais. Saves em IndexedDB e detecção de versões inglesa/russa são recursos declarados pelo autor, não validados nesta sessão. A compatibilidade depende da edição; os arquivos originais são obrigatórios.",
+    "requirements": "Cópia própria compatível de Heroes II: DATA/HEROES2.AGG e MAPS/. HEROES2X.AGG para expansão; MUSIC/ e ANIM/ conforme instruções. Selecionar pasta ou ZIP no launcher.",
+    "graphics": "WebAssembly · SDL2",
+    "artFit": "cover",
+    "artImageSource": "https://github.com/Carter54git/fheroes-1.1.17-ported-to-web/blob/main/docs/screenshot.png",
+    "fileGuide": {
+      "description": "Obtenha os dados da sua cópia de Heroes of Might and Magic II, por exemplo uma instalação GOG/CD compatível indicada pelo autor. Separe DATA/HEROES2.AGG e MAPS/; mantenha a estrutura de pastas ao preparar o ZIP. O motor e o portal não fornecem os arquivos comerciais nem garantem compatibilidade com toda edição.",
+      "links": [
+        {
+          "label": "Preparação dos arquivos e versões compatíveis · autor do port",
+          "url": "https://github.com/Carter54git/fheroes-1.1.17-ported-to-web#required-game-files"
+        },
+        {
+          "label": "Projeto do motor fheroes2",
+          "url": "https://github.com/ihhub/fheroes2"
+        }
+      ]
+    },
+    "color": "#293b8f",
+    "symbol": "✦",
+    "sub": "ESTRATÉGIA",
+    "checked": "2026-11-03",
+    "http": 200,
+    "devices": [
+      "PC"
+    ],
+    "device": "Computador · consulte requisitos do projeto",
+    "inputs": [
+      "Mouse",
+      "Teclado"
+    ],
+    "multiplayer": null,
+    "screenshots": [],
+    "art": "assets/classic-heroes-ii.webp",
+    "artKind": "project",
+    "artSource": "https://github.com/Carter54git/fheroes-1.1.17-ported-to-web",
+    "artDescription": "Imagem publicada pelo projeto, usada para identificação. Não comprova recursos ou funcionamento em todos os aparelhos.",
+    "desc": "Port não oficial do motor fheroes2 1.1.17, via WebAssembly/SDL2. O autor pede dados de uma cópia própria de Heroes II, com DATA/HEROES2.AGG e mapas em MAPS/. O arquivo HEROES2X.AGG habilita conteúdo de Price of Loyalty; música e vídeos dependem dos arquivos e da organização descritos no projeto. Não fornece os dados comerciais. Saves em IndexedDB e detecção de versões inglesa/russa são recursos declarados pelo autor, não validados nesta sessão. A compatibilidade depende da edição; os arquivos originais são obrigatórios.",
+    "searchText": "Heroes of Might and Magic II · fheroes2 Web Heroes of Might and Magic II Estratégia por turnos, heróis e castelos no motor fheroes2 adaptado para navegador.",
+    "discoverySource": "https://github.com/Carter54git/fheroes-1.1.17-ported-to-web"
+  },
+  {
     "color": "#4a3580",
     "symbol": "✦",
     "checked": "2026-11-03",
@@ -4348,4 +4526,4 @@ const games = [
     "artDescription": "Imagem ou ícone publicado pelo criador, usado para identificação do jogo."
   }
 ];
-const audit = {"date":"2026-11-03","indexEntries":984,"indexLaunchLinks":557,"checkedDestinations":164,"httpSuccess":155,"catalogEntries":104,"method":"Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo. Ampliação: 24 páginas de jogos e criadores responderam HTTP 200 em 03/11/2026; as partidas dessas novas entradas não foram testadas.","sources":["https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports","https://github.com/HarshitWaldia/Browser-Games-Directory","https://portedgames.com/browser/","https://playgta5.pro/games","https://github.com/jenissimo/bottleship","https://play2048.co/","https://hexgl.bkcore.com/play/","https://adarkroom.doublespeakgames.com/","https://orteil.dashnet.org/cookieclicker/","https://www.decisionproblem.com/paperclips/","https://ivark.github.io/AntimatterDimensions/","https://sandspiel.club/","https://sandboxels.r74n.com/","https://shapez.io/","https://kodub.itch.io/polytrack","https://ninja-muffin24.itch.io/funkin","https://maddymakesgamesinc.itch.io/celesteclassic","https://littlealchemy2.com/","https://neal.fun/infinite-craft/","https://slowroads.io/","https://skribbl.io/","https://garticphone.com/","https://smashkarts.io/","https://shellshock.io/","http://slither.io/?a","https://0hh1.com/","https://0hn0.com/","https://ducklings.io/","https://teamwood.itch.io/super-auto-pets","https://github.com/AgentiLoop/MarioKart64JS","https://github.com/andrewnakas/oot-cleanroom","https://projects.sappharad.com/s3air_ios/","https://dune2js.com/","https://doodles.google/doodle/30th-anniversary-of-pac-man/?hl=pt-BR","https://play.tetris.com/games/"],"browserTests":[{"game":"GTA V","url":"https://playgta5.pro/","result":"Launcher aberto; cliques em Play não chegaram à partida nesta sessão. Anúncios observados. Nenhum certificado ou programa instalado."},{"game":"NFS Most Wanted","url":"https://web.nfsmwo.com/","result":"Tela inicial carregada; início solo acionado; runtime encerrou com código 0x1. Corrida não validada."},{"game":"PES 6","url":"https://pes6.optijuegos.net/","result":"Seletor de início carregado; início sem narração falhou por adaptador WebGPU indisponível no navegador remoto."}]};
+const audit = {"date":"2026-11-03","indexEntries":984,"indexLaunchLinks":557,"checkedDestinations":168,"httpSuccess":159,"catalogEntries":108,"method":"Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo. Ampliação: 24 páginas de jogos e criadores responderam HTTP 200 em 03/11/2026; as partidas dessas novas entradas não foram testadas. Rodada de clássicos: quatro distribuições web observadas no navegador em 03/11/2026, com menu, introdução, cenário ou seletor de arquivos discriminados; nenhuma campanha ou partida completa foi validada.","sources":["https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports","https://github.com/HarshitWaldia/Browser-Games-Directory","https://portedgames.com/browser/","https://playgta5.pro/games","https://github.com/jenissimo/bottleship","https://play2048.co/","https://hexgl.bkcore.com/play/","https://adarkroom.doublespeakgames.com/","https://orteil.dashnet.org/cookieclicker/","https://www.decisionproblem.com/paperclips/","https://ivark.github.io/AntimatterDimensions/","https://sandspiel.club/","https://sandboxels.r74n.com/","https://shapez.io/","https://kodub.itch.io/polytrack","https://ninja-muffin24.itch.io/funkin","https://maddymakesgamesinc.itch.io/celesteclassic","https://littlealchemy2.com/","https://neal.fun/infinite-craft/","https://slowroads.io/","https://skribbl.io/","https://garticphone.com/","https://smashkarts.io/","https://shellshock.io/","http://slither.io/?a","https://0hh1.com/","https://0hn0.com/","https://ducklings.io/","https://teamwood.itch.io/super-auto-pets","https://github.com/AgentiLoop/MarioKart64JS","https://github.com/andrewnakas/oot-cleanroom","https://projects.sappharad.com/s3air_ios/","https://dune2js.com/","https://doodles.google/doodle/30th-anniversary-of-pac-man/?hl=pt-BR","https://play.tetris.com/games/","https://openjazz.github.io/","https://github.com/openjazz/openjazz.github.io","https://warpdesign.github.io/flashback-web/","https://github.com/warpdesign/flashback-web","https://cyxx.github.io/another_js/","https://github.com/cyxx/another_js","https://buildenginegames.online/homm2webgit/index.html","https://github.com/Carter54git/fheroes-1.1.17-ported-to-web"],"browserTests":[{"game":"GTA V","url":"https://playgta5.pro/","result":"Launcher aberto; cliques em Play não chegaram à partida nesta sessão. Anúncios observados. Nenhum certificado ou programa instalado."},{"game":"NFS Most Wanted","url":"https://web.nfsmwo.com/","result":"Tela inicial carregada; início solo acionado; runtime encerrou com código 0x1. Corrida não validada."},{"game":"PES 6","url":"https://pes6.optijuegos.net/","result":"Seletor de início carregado; início sem narração falhou por adaptador WebGPU indisponível no navegador remoto."},{"game":"Jazz Jackrabbit · OpenJazz Shareware","url":"https://openjazz.github.io/","result":"A distribuição indicada pelo OpenJazz carregou a apresentação, o menu THIS IS SHAREWARE e a tela de instruções em 03/11/2026. Movimento em fase e progressão não validados."},{"game":"Flashback · Demo DOS Web","url":"https://warpdesign.github.io/flashback-web/","result":"Botão Play acionado, controles publicados e introdução animada Delphine Software / US Gold observados em 03/11/2026. Comando Tab enviado; controle de Conrad e progressão em fase não validados."},{"game":"Another World · Demo DOS HTML5","url":"https://cyxx.github.io/another_js/","result":"Tela de apresentação e seletor de capítulos observados em 03/11/2026. Selecionada a parte Water; cenário renderizado e comando de seta enviado. Resposta do personagem, sobrevivência e progressão não validadas."},{"game":"Heroes of Might and Magic II · fheroes2 Web","url":"https://buildenginegames.online/homm2webgit/index.html","result":"Launcher renderizado em 03/11/2026, com Select folder, Upload ZIP e Click to Play desabilitado sem os dados. Nenhum arquivo original fornecido e nenhuma partida iniciada."}]};
