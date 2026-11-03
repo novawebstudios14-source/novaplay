@@ -1,10 +1,10 @@
 {
   "date": "2026-11-03",
-  "indexEntries": 980,
-  "indexLaunchLinks": 553,
-  "checkedDestinations": 160,
-  "httpSuccess": 151,
-  "catalogEntries": 102,
+  "indexEntries": 984,
+  "indexLaunchLinks": 557,
+  "checkedDestinations": 164,
+  "httpSuccess": 155,
+  "catalogEntries": 106,
   "method": "Busca internacional, deduplicação de candidatos por URL, requisições HTTP e inspeção de launchers selecionados. HTTP 200 não comprova execução do jogo. Ampliação: 24 páginas de jogos e criadores responderam HTTP 200 em 03/11/2026; as partidas dessas novas entradas não foram testadas.",
   "sources": [
     "https://github.com/Carter54git/Ultimate-Catalog-Of-Web-Game-Ports",
@@ -37,7 +37,11 @@
     "https://ducklings.io/",
     "https://teamwood.itch.io/super-auto-pets",
     "https://github.com/AgentiLoop/MarioKart64JS",
-    "https://github.com/andrewnakas/oot-cleanroom"
+    "https://github.com/andrewnakas/oot-cleanroom",
+    "https://projects.sappharad.com/s3air_ios/",
+    "https://dune2js.com/",
+    "https://doodles.google/doodle/30th-anniversary-of-pac-man/?hl=pt-BR",
+    "https://play.tetris.com/games/"
   ],
   "destinations": [
     {
@@ -2284,6 +2288,34 @@
       "http": 200,
       "checked": "2026-11-03",
       "verification": "HTTP 200 e carregador observados em 03/11/2026. Após carregar, canvas escuro; partida não validada."
+    },
+    {
+      "name": "Sonic 3 & Knuckles · A.I.R. Web Beta",
+      "url": "https://projects.sappharad.com/s3air_ios/20260328_beta/sonic3air_web.html",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "Beta carregou e exibiu a solicitação do arquivo próprio em 03/11/2026. Partida não iniciada sem ROM fornecida pelo usuário."
+    },
+    {
+      "name": "Dune II · OpenDUNE Web",
+      "url": "https://dune2js.com/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "Casa Atreides, apresentação e cenário de missão observados em 03/11/2026. Mensagem de conclusão apareceu rapidamente; partida normal e campanha não validadas."
+    },
+    {
+      "name": "PAC-MAN · Google Doodle",
+      "url": "https://www.google.com/logos/2010/pacman10-hp.html",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "Sessão curta iniciada em 03/11/2026: labirinto, personagens, movimentação e pontuação de 10 observados. Não houve teste de todas as fases."
+    },
+    {
+      "name": "Tetris · Marathon oficial",
+      "url": "https://play.tetris.com/games/marathon/",
+      "http": 200,
+      "checked": "2026-11-03",
+      "verification": "Página oficial e player observados em 03/11/2026. O player informou ausência de suporte a WebGL neste navegador remoto; partida não validada."
     }
   ],
   "browserTests": [
