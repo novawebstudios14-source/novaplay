@@ -781,5 +781,173 @@
       512
     ],
     "note": "Logotipo oficial da coleção DOS.Zone, recuperado do repositório do aplicativo do projeto."
+  },
+  "web-2048": {
+    "name": "2048",
+    "image": "assets/web-2048.webp",
+    "source": "https://play2048.co/",
+    "imageSource": "https://play2048.co/ogImage.jpg",
+    "screens": []
+  },
+  "web-hexgl": {
+    "name": "HexGL",
+    "image": "assets/web-hexgl.webp",
+    "source": "https://hexgl.bkcore.com/play/",
+    "imageSource": "https://hexgl.bkcore.com/image.png",
+    "screens": []
+  },
+  "web-a-dark-room": {
+    "name": "A Dark Room",
+    "image": "assets/web-a-dark-room.webp",
+    "source": "https://adarkroom.doublespeakgames.com/",
+    "imageSource": "https://adarkroom.doublespeakgames.com/img/adr.png",
+    "screens": []
+  },
+  "web-cookie-clicker": {
+    "name": "Cookie Clicker",
+    "image": "assets/web-cookie-clicker.webp",
+    "source": "https://orteil.dashnet.org/cookieclicker/",
+    "imageSource": "https://orteil.dashnet.org/cookieclicker/img/favicon.ico",
+    "screens": []
+  },
+  "web-universal-paperclips": {
+    "name": "Universal Paperclips",
+    "image": "assets/web-universal-paperclips.webp",
+    "source": "https://www.decisionproblem.com/paperclips/",
+    "imageSource": "https://www.decisionproblem.com/paperclips/title.png",
+    "screens": []
+  },
+  "web-antimatter-dimensions": {
+    "name": "Antimatter Dimensions",
+    "image": "assets/web-antimatter-dimensions.webp",
+    "source": "https://ivark.github.io/AntimatterDimensions/",
+    "imageSource": "https://ivark.github.io/AntimatterDimensions/icon.png",
+    "screens": []
+  },
+  "web-sandspiel": {
+    "name": "Sandspiel",
+    "image": "assets/web-sandspiel.webp",
+    "source": "https://sandspiel.club/",
+    "imageSource": "https://sandspiel.club/assets/apple-touch-icon.png",
+    "screens": []
+  },
+  "web-sandboxels": {
+    "name": "Sandboxels",
+    "image": "assets/web-sandboxels.webp",
+    "source": "https://sandboxels.r74n.com/",
+    "imageSource": "https://sandboxels.r74n.com/icons/cover-3840x1240px-text.png",
+    "screens": []
+  },
+  "web-shapez-demo": {
+    "name": "shapez · Demo",
+    "image": "assets/web-shapez-demo.webp",
+    "source": "https://shapez.io/",
+    "imageSource": "https://shapez.io/og_thumb.png",
+    "screens": []
+  },
+  "web-polytrack": {
+    "name": "PolyTrack",
+    "image": "assets/web-polytrack.webp",
+    "source": "https://kodub.itch.io/polytrack",
+    "imageSource": "https://img.itch.zone/aW1nLzI2MDUxNTMzLnBuZw==/original/AEnurg.png",
+    "screens": []
+  },
+  "web-friday-night-funkin": {
+    "name": "Friday Night Funkin’",
+    "image": "assets/web-friday-night-funkin.webp",
+    "source": "https://ninja-muffin24.itch.io/funkin",
+    "imageSource": "https://img.itch.zone/aW1nLzQ1MjMxODcuZ2lm/original/5%2BUV5L.gif",
+    "screens": []
+  },
+  "web-celeste-classic": {
+    "name": "Celeste Classic",
+    "image": "assets/web-celeste-classic.webp",
+    "source": "https://maddymakesgamesinc.itch.io/celesteclassic",
+    "imageSource": "https://img.itch.zone/aW1hZ2UvMzEzMTgvMTMzNjQyLmdpZg==/original/vIUIrE.gif",
+    "screens": []
+  },
+  "web-little-alchemy-2": {
+    "name": "Little Alchemy 2",
+    "image": "assets/web-little-alchemy-2.webp",
+    "source": "https://littlealchemy2.com/",
+    "imageSource": "https://littlealchemy2.com/static/img/little-alchemy-2-fb-thumbnail.jpg",
+    "screens": []
+  },
+  "web-infinite-craft": {
+    "name": "Infinite Craft",
+    "image": "assets/web-infinite-craft.webp",
+    "source": "https://neal.fun/infinite-craft/",
+    "imageSource": "https://neal.fun/share-cards/infinite-craft.png",
+    "screens": []
+  },
+  "web-slow-roads": {
+    "name": "Slow Roads",
+    "image": "assets/web-slow-roads.webp",
+    "source": "https://slowroads.io/",
+    "imageSource": "https://slowroads.io/meta-autumn-02c.jpg",
+    "screens": []
+  },
+  "web-skribbl-io": {
+    "name": "Skribbl.io",
+    "image": "assets/web-skribbl-io.webp",
+    "source": "https://skribbl.io/",
+    "imageSource": "https://skribbl.io/img/thumbnail.png",
+    "screens": []
+  },
+  "web-gartic-phone": {
+    "name": "Gartic Phone",
+    "image": "assets/web-gartic-phone.webp",
+    "source": "https://garticphone.com/",
+    "imageSource": "https://garticphone.com/images/thumb.png",
+    "screens": []
+  },
+  "web-smash-karts": {
+    "name": "Smash Karts",
+    "image": "assets/web-smash-karts.webp",
+    "source": "https://smashkarts.io/",
+    "imageSource": "https://smashkarts.io/images/icon-144.png",
+    "screens": []
+  },
+  "web-shell-shockers": {
+    "name": "Shell Shockers",
+    "image": "assets/web-shell-shockers.webp",
+    "source": "https://shellshock.io/",
+    "imageSource": "https://www.shellshock.io/img/previewImage_shellShockers.webp",
+    "screens": []
+  },
+  "web-slither-io": {
+    "name": "Slither.io",
+    "image": "assets/web-slither-io.webp",
+    "source": "http://slither.io/?a",
+    "imageSource": "https://slither.io/s/fbthumb5.jpg",
+    "screens": []
+  },
+  "web-0h-h1": {
+    "name": "0h h1",
+    "image": "assets/web-0h-h1.webp",
+    "source": "https://0hh1.com/",
+    "imageSource": "https://0hh1.com/img/facebook-promotion.png",
+    "screens": []
+  },
+  "web-0h-n0": {
+    "name": "0h n0",
+    "image": "assets/web-0h-n0.webp",
+    "source": "https://0hn0.com/",
+    "imageSource": "https://0hn0.com/img/facebook-promotion.png",
+    "screens": []
+  },
+  "web-ducklings-io": {
+    "name": "Ducklings.io",
+    "image": "assets/web-ducklings-io.webp",
+    "source": "https://ducklings.io/",
+    "imageSource": "https://ducklings.io/img/thumb.png",
+    "screens": []
+  },
+  "web-super-auto-pets": {
+    "name": "Super Auto Pets",
+    "image": "assets/web-super-auto-pets.webp",
+    "source": "https://teamwood.itch.io/super-auto-pets",
+    "imageSource": "https://img.itch.zone/aW1nLzExNTA5ODQ1LnBuZw==/original/m8cbDR.png",
+    "screens": []
   }
 }

@@ -28,3 +28,6 @@ Restore the editorial headline, game name and concise description in the fixed-h
 
 ## 2026-11-03 visual refresh
 Immersive dark arcade direction: a larger fixed-height hero, blue-to-purple primary actions, an image-led spotlight rail, photographic collection tiles and framed game cards. Preserve existing links, local library data and evidence descriptions. References reviewed: Steam (https://store.steampowered.com/), Xbox Game Pass (https://www.xbox.com/pt-BR/xbox-game-pass), Poki (https://poki.com/br), CrazyGames (https://www.crazygames.com/br/). These inform hierarchy and browsing patterns, without copying branding.
+
+## Catalog expansion
+100 entries: 24 additional creator-hosted browser games, demos and original web releases. Added Puzzle and Ritmo categories plus a Navegador platform group. New entries record HTTP success only, without claiming tested gameplay.
