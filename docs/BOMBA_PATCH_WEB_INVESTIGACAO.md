@@ -119,3 +119,28 @@ os recursos externos do catálogo existente. Compatibilidade no iPhone não foi 
 O upstream não inclui os dados do jogo e orienta manter os binários recompilados
 localmente. Para publicação pública, definir previamente quais dados e derivados
 podem ser distribuídos; um carregador de arquivo local evita hospedar a ISO.
+
+## Nova tentativa de obtenção — 06/11/2026
+- Localizado o site MyMaxFF em https://mymaxff.tgamesandroid.com/.
+- A publicação de 21/10/2026
+  https://mymaxff.tgamesandroid.com/2026/10/download-da-iso-bomba-patch-2027-completa-com-todas-narracoes-ps2-opl-pcsx2-100-atualizado.html/
+  contém um botão com destino literal COLOQUE_AQUI_O_LINK_DA_ISO, que retornou 404.
+  A opção de câmera PS4 leva a uma pasta MediaFire, não a um arquivo identificado.
+- A publicação https://mymaxff.tgamesandroid.com/2026/07/6787.html/
+  forneceu arquivos específicos:
+  - Cazé TV: https://www.mediafire.com/file/xo5du8s2b4t3dq5/BOMBA_PATCH_PS2__MYMAX_CAZE_TV.rar/file
+    — página informa 902,44 MB e upload de 13/07/2026.
+  - André Henning: https://www.mediafire.com/file/psn0m3otfezsp36/BOMBA_PATCH_PS2__MYMAX_ANDRE_HENNING.rar/file
+    — página informa 923,83 MB e upload de 13/07/2026.
+  - Cléber Machado: https://www.mediafire.com/file/n5yj8kb0gyhfkes/BOMBA_PATCH_PS2__MYMAX_CLEBER_MACHADO.rar/file
+    — página informa 1,14 GB e upload de 13/07/2026.
+- O acesso ao download Cazé TV pela busca redirecionou à reparação do MediaFire.
+  Nos outros dois, a ferramenta de busca chegou a uma resposta application/x-rar,
+  mas não aceita esse tipo de conteúdo para obtenção dos bytes.
+- Tentativas de leitura limitada pelo executor dos links Cazé TV e André Henning
+  retornaram HTTP 206 com 195 bytes de HTML: Site Unavailable / Unable to access this site.
+  Não continham assinatura RAR. O status HTTP sozinho não confirma o download.
+- Não é correto declarar esses links mortos ou os arquivos íntegros:
+  a origem apresentou os arquivos, mas este ambiente não obteve os bytes.
+  Nenhum arquivo foi executado, extraído ou publicado. Nenhuma nova compilação
+  do jogo foi possível; os testes anteriores continuam sendo apenas da ferramenta.
