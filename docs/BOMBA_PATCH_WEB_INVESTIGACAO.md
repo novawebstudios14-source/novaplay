@@ -3,10 +3,65 @@
 Data: 2026-11-06
 
 ## Estado
-Pesquisa de bases concluída. Nenhum executável do jogo foi analisado, recompilado ou testado.
+Pesquisa de bases e compilação do recompilador realizadas. Nenhum executável do jogo foi analisado, recompilado ou testado.
 Não há versão jogável criada nem nova entrada adicionada ao catálogo.
 Falta a imagem de disco da edição exata a analisar. O nome "Bomba Patch" não identifica
 um único binário: a análise precisa registrar edição, plataforma, executável e hashes.
+
+## Avanço verificado em 06/11/2026
+- Código de ps2-web-recomp baixado no commit e026b971324068773eed88bf502437de9e581b6b.
+- Compilado o alvo eerecomp com GCC 13.3.0 e CMake 4.4.4.
+- Passaram os testes upstream analysis_tailcall.py, elf_bss.py e codegen_fallthrough.py.
+  GCC emitiu avisos sobre o atributo clang::musttail no último teste, que encerrou com código 0.
+  São regressões sintéticas do recompilador, não testes de compatibilidade do jogo.
+- Não foram compilados o runtime completo, Emscripten ou um jogo para navegador.
+- Coletados 20 clubes e 20 respostas de elenco da ESPN, totalizando 944 registros de atletas.
+  Isso não significa 944 jogadores únicos, inscritos ou confirmados no elenco atual.
+  As 20 respostas identificam a temporada 2026. Snapshot:
+  research/football/bra-1-2026-2026-11-06.json.
+- O script scripts/fetch-football-rosters.py reproduz a coleta, conserva URL e horário,
+  resume campos factuais e não calcula atributos de jogo. Não foi aplicado à ISO.
+
+## Localização dos arquivos do jogo
+- O perfil https://linktr.ee/bombapatchgeomatrix aponta para https://superbombapatch.com/.
+- A página https://superbombapatch.com/products/super-bomba-patch-ps2 anuncia
+  Super Bomba Patch 2027 (PS2), a partir de R$ 23,90, com entrega digital por e-mail
+  após a compra. Não foi realizada compra nem recebido arquivo.
+- https://mymaxandroidpsp.com/2026/05/01/novo-bomba-patch-2026-ps2-iso-download-100-atualizado-opl-pcsx2-android/
+  liga a uma pasta MediaFire, o1ftln00w9px8. A extração web não forneceu arquivos
+  utilizáveis; uma tentativa de listar a pasta pela API não retornou JSON válido.
+  Isso não comprova que a pasta esteja vazia para todos os usuários.
+- https://baixapatch.com/2026/10/26/bomba-patch-2027-brasileirao-100-atualizado/
+  anuncia edição Maymax de outubro, mas a extração consultada não forneceu ISO.
+- Outras páginas indexadas anunciam ISOs; anúncio não equivale a bytes obtidos,
+  autenticidade, integridade ou permissão de redistribuição.
+- Resultado desta etapa: nenhuma ISO foi baixada; nenhum hash de disco foi verificado.
+
+## Outras ferramentas localizadas
+- https://github.com/hiitsgabe/retro_roster_patcher — referência MIT para atualização
+  de elencos; inclui PES 2013 PS2 e WE2002 PS1, não suporte declarado a WE10 PS2.
+  Código consultado no commit 1e0ec83968bd8de2f1882856a4baed49e9d020b2.
+- https://github.com/moth1995/AFS_PES_PSP_Converter — MIT, conversor de AFS de
+  PES 2010 PSP. Não presumir compatibilidade com AFS de WE10 PS2.
+- https://github.com/dzakyraf/pes2017-recomp — referência de recompilação de PES2017
+  Xbox360 para Android ARM64; não é um port pronto para navegador.
+- https://zenhax.com/viewtopic.php@t=2569.html — discussão técnica de extração WE10
+  com relatos de formatos diferentes entre arquivos AFS; exige inspeção de cada formato.
+
+## Reproduzir a verificação já realizada
+
+    git clone https://github.com/snuri00/ps2-web-recomp.git
+    cd ps2-web-recomp
+    git checkout e026b971324068773eed88bf502437de9e581b6b
+    cmake -S . -B build/tools -DCMAKE_BUILD_TYPE=Release
+    cmake --build build/tools --target eerecomp -j 2
+    python3 tests/analysis_tailcall.py
+    python3 tests/elf_bss.py
+    python3 tests/codegen_fallthrough.py
+
+Coleta dos dados, a partir da raiz da Nova Play (o destino deve ser novo):
+
+    python3 scripts/fetch-football-rosters.py --season 2026 --out research/football/nova-coleta.json
 
 ## Bases verificadas
 - https://github.com/jpd002/Play- — emulador PS2 com versão web.
